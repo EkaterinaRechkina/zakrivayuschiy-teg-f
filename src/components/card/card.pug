@@ -1,0 +1,11 @@
+mixin card(imgUrl, title, text,secondText, className, waterMark)
+  article.card
+    h3.card__title= title
+    .card__image(class=className)
+      img(src=imgUrl, alt=title)
+      p.card__watermark= waterMark
+    .card__content
+      p.card__text= text
+      p.card__text= secondText
+      .img__like 
+      button.button__like
