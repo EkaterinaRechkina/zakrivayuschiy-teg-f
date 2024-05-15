@@ -5,10 +5,10 @@
   "main": "index.js",
   "scripts": {
     "test": "echo 'Привет!'",
-    "check": "prettier --check './src/**/*.{pug,html,scss,css,js}'",
-    "format": "prettier --write './src/**/*.{pug,html,scss,css,js}'",
-    "lint": "stylelint './src/**/*.{scss,css}'",
-    "lintfix": "stylelint './src/**/*.{scss,css}' --fix", 
+    "check": "prettier --check './src/**/*.{html,css,js}'",
+    "format": "prettier --write './src/**/*.{html,css,js}'",
+    "lint": "stylelint './src/**/*.css'",
+    "lintfix": "stylelint './src/**/*.css' --fix",
     "checkAll": "npm run check && npm run lint",
     "fixAll": "npm run format && npm run lintfix",
     "build": "gulp build",
@@ -28,12 +28,10 @@
     "gulp-plumber": "^1.2.1",
     "gulp-postcss": "^9.0.1",
     "gulp-pug": "^5.0.0",
-    "gulp-sass": "^5.1.0",
     "html-minifier": "^4.0.0",
     "postcss": "^8.4.23",
     "postcss-combine-media-query": "^1.0.1",
     "prettier": "^2.8.7",
-    "sass": "^1.75.0",
     "stylelint": "^15.4.0"
   },
   "browserslist": [

@@ -7,8 +7,10 @@ html(lang="ru")
     meta(name="viewport", content="width=device-width, initial-scale=1")
     title=title 
     link(rel="stylesheet", href="/bundle.css")
-  body.default-layout
-    //- include ../components/header/header
-    //- +header(includeHomeLink)
-    //- block content       
-    //- include ../components/footer/footer 
+  body.page
+    include ../components/header/header
+    block header
+    block content   
+    include ../components/button/button    
+    block button
+    script(src="./scripts/like.js")

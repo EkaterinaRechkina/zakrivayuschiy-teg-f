@@ -1,0 +1,25 @@
+//- mixin header(includeHomeLink)
+//-   header.header
+//-     a.header__logo
+//-       img(src='/images/logo.svg', alt='logo')
+//-     nav.header__menu
+//-       ul.header__menu-list
+//-         if includeHomeLink
+//-           li.header__menu-list-item
+//-             a.header__menu-link(href='#') Home
+//-         li.header__menu-list-item
+//-           a.header__menu-link(href='#') About
+//-         li.header__menu-list-item
+//-           a.header__menu-link(href='#') Contacts
+
+header.header
+  h1.header__title HTML
+  p.header__text закрывающий тег
+  nav.header__theme-menu
+    ul.theme-menu__list
+      li.theme-menu__item
+        button.theme-menu__button(type="button" data-theme="dark") Темно
+      li.theme-menu__item
+        button.theme-menu__button(type="button" data-theme="auto" disabled) Авто
+      li.theme-menu__item
+        button.theme-menu__button(type="button" data-theme="light") Светло    
