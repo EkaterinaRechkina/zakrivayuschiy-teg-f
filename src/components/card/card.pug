@@ -1,11 +1,12 @@
-mixin card(imgUrl, title, text,secondText, className, waterMark)
+mixin card(imgUrl, title, text,secondText, waterMark)
   article.card
     h3.card__title= title
-    .card__image(class=className)
+    .card__block
       p.card__watermark= waterMark
-      img(src=imgUrl, alt=title)
+      img.card__image(src=imgUrl, alt=title)
     .card__content
       p.card__text= text
       p.card__text= secondText
-      .img__like 
-      a.button__like Like
+      .like__container
+        img.img__like(src='../images/heart.svg', alt="лайк") 
+        a.button__like Like

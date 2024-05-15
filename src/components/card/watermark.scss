@@ -1,0 +1,12 @@
+.card__watermark {
+  position: absolute;
+  color: black;
+//   text-shadow: 1px 0 1px white,
+//   0 1px 1px white, 
+// -1px 0 1px white, 
+// 0 -1px 1px white;
+-webkit-text-stroke:1px white;
+  right: 25px;
+  top: 25px;
+  font-family: "PressStart2P-Regular", system-ui;
+}

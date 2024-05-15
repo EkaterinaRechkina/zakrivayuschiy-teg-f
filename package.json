@@ -28,10 +28,12 @@
     "gulp-plumber": "^1.2.1",
     "gulp-postcss": "^9.0.1",
     "gulp-pug": "^5.0.0",
+    "gulp-sass": "^5.1.0",
     "html-minifier": "^4.0.0",
     "postcss": "^8.4.23",
     "postcss-combine-media-query": "^1.0.1",
     "prettier": "^2.8.7",
+    "sass": "^1.77.1",
     "stylelint": "^15.4.0"
   },
   "browserslist": [

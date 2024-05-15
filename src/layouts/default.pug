@@ -8,9 +8,10 @@ html(lang="ru")
     title=title 
     link(rel="stylesheet", href="/bundle.css")
   body.page
-    include ../components/header/header
-    block header
-    block content   
-    include ../components/button/button    
-    block button
+    .container                
+      include ../components/header/header
+      block content   
+      include ../components/button/button    
+      include ../components/popup/popup    
+     
     script(src="./scripts/like.js")
