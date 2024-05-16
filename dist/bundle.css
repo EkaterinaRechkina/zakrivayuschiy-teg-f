@@ -1,11 +1,7 @@
-@charset "UTF-8";
-
-/* В этом файле вы импортируете все шрифты для сайта. Один из них вариативный и требует особенной настройки */
-
 @font-face {
   font-display: swap;
   font-family: "Inter-Variable";
-  src: local("Inter-Variable"), url("fonts/Roboto-Flex-Variable.woff2") format("woff2");
+  src: local("Inter-Variable"), url("fonts/Inter-Variable.woff2") format("woff2 supports variations"), url("fonts/Inter-Variable.woff2") format("woff2-variations");
 }
 
 @font-face {
@@ -43,12 +39,6 @@
   max-inline-size: 696px;
   margin: 0 auto;
 }
-@charset "UTF-8";
-
-/* В этом файле уже написаны некоторые базовые стили, которые сбрасывают или преобразуют дефольное браузерное поведение.
-Здесь же лежит утилитарный класс visually-hidden на случай, если нужно скрыть какой-то элемент, но оставить доступным для скринридера.
-Вы можете изменять этот файл или дополнять. Но скорее всего, вам это не потребуется. */
-
 *,
 *::after,
 *::before {
@@ -184,7 +174,7 @@ ol {
   width: 100%;
   aspect-ratio: 1/1;
 }
-.img__like {
+.like-icon {
   inline-size: 27px;
   height: 24px;
   display: inline-block;
@@ -263,6 +253,7 @@ ol {
           margin-block-end: 20px;
 }
 .popup {
+  font-family: "PressStart2P-Regular", system-ui;
   inline-size: 353px;
   border: 2px solid black;
   padding: 31.5px;

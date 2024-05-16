@@ -19,6 +19,13 @@ function serve() {
   });
 }
 
+function fonts(){
+  return gulp.src('src/fonts/*.woff*')
+    .pipe(gulp.dest('dist/fonts'))
+    .pipe(browserSync.reload({stream: true}));
+}
+
+
 function pug() {
   return gulp.src('src/pages/**/*.pug')
         .pipe(gulpPug({
@@ -93,15 +100,17 @@ function watchFiles() {
   gulp.watch(['src/**/*.html'], html);
   gulp.watch(['src/**/*.scss'], scss); 
   gulp.watch(['src/**/*.{jpg,png,svg,gif,ico,webp,avif}'], images);
+  gulp.watch(['src/**/*.woff*'], fonts); 
 }
 
-const build = gulp.series(clean, gulp.parallel(pug, scss, images));
+const build = gulp.series(clean, gulp.parallel(pug, scss, images,fonts));
 const watchapp = gulp.parallel(build, watchFiles, serve);
 
 exports.html = html;
 exports.pug = pug;
 exports.images = images;
 exports.scss = scss;
+exports.fonts = fonts;
 exports.clean = clean;
 
 exports.build = build;
