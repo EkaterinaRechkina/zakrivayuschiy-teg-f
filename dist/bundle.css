@@ -127,6 +127,10 @@ ol {
   font-family: "PressStart2P-Regular", system-ui;
   background-color: white;
 }
+
+.button__save:hover {
+  cursor: pointer;
+}
 .svg__container-button {
   inline-size: 21px;
   block-size: 21px;
@@ -254,6 +258,18 @@ ol {
   line-height: 1;
   -webkit-margin-after: 20px;
           margin-block-end: 20px;
+}
+#popover {
+  position: absolute;
+  inset: 40vh 0 0;
+}
+
+#popover::-webkit-backdrop {
+  background-color: rgba(0, 0, 0, 0.75);
+}
+
+#popover::backdrop {
+  background-color: rgba(0, 0, 0, 0.75);
 }
 .popup {
   font-family: "PressStart2P-Regular", system-ui;
