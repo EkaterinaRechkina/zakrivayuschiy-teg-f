@@ -259,15 +259,9 @@ ol {
   -webkit-margin-after: 20px;
           margin-block-end: 20px;
 }
-#popover {
-  position: absolute;
-  inset: 40vh 0 0;
-}
-
 #popover::-webkit-backdrop {
   background-color: rgba(0, 0, 0, 0.75);
 }
-
 #popover::backdrop {
   background-color: rgba(0, 0, 0, 0.75);
 }
@@ -276,7 +270,6 @@ ol {
   inline-size: 353px;
   border: 2px solid black;
   padding: 31.5px;
-  margin: 0 auto;
   background-color: white;
 }
 .popup__button {
