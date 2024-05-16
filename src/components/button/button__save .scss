@@ -8,4 +8,7 @@
   padding: 18.5px 21px;
   font-family: "PressStart2P-Regular", system-ui;
   background-color: white;
+  &:hover {
+    cursor: pointer;
+  }
 }

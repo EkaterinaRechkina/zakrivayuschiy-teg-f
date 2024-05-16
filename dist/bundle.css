@@ -127,6 +127,10 @@ ol {
   font-family: "PressStart2P-Regular", system-ui;
   background-color: white;
 }
+
+.button__save:hover {
+  cursor: pointer;
+}
 .svg__container-button {
   inline-size: 21px;
   block-size: 21px;
@@ -140,12 +144,10 @@ ol {
   -webkit-margin-after: 27px;
           margin-block-end: 27px;
 }
-.button__like {
+.button__text {
   font-family: "PressStart2P-Regular", system-ui;
   font-size: 14px;
   line-height: 0.9;
-  padding: 12.5px 37px;
-  border: 2px solid black;
 }
 .card {
   display: -webkit-box;
@@ -158,6 +160,11 @@ ol {
   border: 2px solid black;
   font-family: "Inter-Variable", sans-serif;
   background-color: white;
+}
+.card__like-button {
+  padding: 12.5px 37px;
+  border: 2px solid black;
+  background-color: inherit;
 }
 .card__content {
   padding: 0 20px 25px;
@@ -253,12 +260,17 @@ ol {
   -webkit-margin-after: 20px;
           margin-block-end: 20px;
 }
+#popover::-webkit-backdrop {
+  background-color: rgba(0, 0, 0, 0.75);
+}
+#popover::backdrop {
+  background-color: rgba(0, 0, 0, 0.75);
+}
 .popup {
   font-family: "PressStart2P-Regular", system-ui;
   inline-size: 353px;
   border: 2px solid black;
   padding: 31.5px;
-  margin: 0 auto;
   background-color: white;
 }
 .popup__button {
