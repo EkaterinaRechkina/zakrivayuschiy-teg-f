@@ -137,6 +137,10 @@ ol {
   font-family: "PressStart2P-Regular", system-ui;
   background-color: white;
 }
+.svg__container-button {
+  inline-size: 21px;
+  block-size: 21px;
+}
 .text__save {
   font-size: 14px;
   line-height: 0.9;
@@ -281,6 +285,13 @@ ol {
   gap: 20px;
   -webkit-margin-after: 30px;
           margin-block-end: 30px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.svg__container-popup {
+  inline-size: 39px;
+  block-size: 39px;
 }
 .text__popup {
   font-size: 14px;
