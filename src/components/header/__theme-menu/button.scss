@@ -1,4 +1,53 @@
 .theme-menu__button {
   border: none;
-  background: transparent;
+  background: inherit;
+  padding: 0;
+  position: relative;
+  &:hover {
+    cursor: pointer;
+  }
+  &:active {
+    opacity: 0.6;
+    color: black;
+    &::before {
+      content: "▶";
+      display: inline-block;
+      animation: backandforth 1.5s infinite;
+    }
+  }
+  &::after {
+    content: "";
+    width: 0px;
+    height: 2px;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background: black;
+    opacity: 0.6;
+    transition: 400ms;
+  }
+
+  &:focus {
+    outline: none;
+  }
+  &:focus-visible {
+    opacity: 0.6;
+    color: black;
+    &::after {
+      width: 100%;
+    }
+  }
 }
+
+@keyframes backandforth {
+	0% {
+		transform: translateX(0);
+	}
+	50% {
+		transform: translateX(-5px);
+	}
+	100% {
+		transform: translateX(0);
+	}
+}
+
