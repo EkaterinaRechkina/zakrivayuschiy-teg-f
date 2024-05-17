@@ -25,6 +25,11 @@ function fonts(){
     .pipe(browserSync.reload({stream: true}));
 }
 
+function js(){
+  return gulp.src('src/scripts/*.js')
+    .pipe(gulp.dest('dist/scripts'))
+    .pipe(browserSync.reload({stream: true}));
+}
 
 function pug() {
   return gulp.src('src/pages/**/*.pug')
@@ -101,9 +106,10 @@ function watchFiles() {
   gulp.watch(['src/**/*.scss'], scss); 
   gulp.watch(['src/**/*.{jpg,png,svg,gif,ico,webp,avif}'], images);
   gulp.watch(['src/**/*.woff*'], fonts); 
+  gulp.watch(['src/**/*.js'], js); 
 }
 
-const build = gulp.series(clean, gulp.parallel(pug, scss, images,fonts));
+const build = gulp.series(clean, gulp.parallel(pug, scss, images,fonts, js));
 const watchapp = gulp.parallel(build, watchFiles, serve);
 
 exports.html = html;
@@ -111,6 +117,7 @@ exports.pug = pug;
 exports.images = images;
 exports.scss = scss;
 exports.fonts = fonts;
+exports.js = js;
 exports.clean = clean;
 
 exports.build = build;

@@ -240,6 +240,14 @@ ol {
   height: 24px;
   display: inline-block;
 }
+
+.like-icon:hover {
+  cursor: pointer;
+}
+
+.is-liked {
+  background-color: red;
+}
 .like__container {
   display: -webkit-box;
   display: -ms-flexbox;

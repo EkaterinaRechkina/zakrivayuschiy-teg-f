@@ -2,4 +2,11 @@
   inline-size: 27px;
   height: 24px;
   display: inline-block;
+  &:hover {
+    cursor: pointer;
+  }
+}
+.is-liked {
+  // need to be fixed
+  background-color: red;
 }
