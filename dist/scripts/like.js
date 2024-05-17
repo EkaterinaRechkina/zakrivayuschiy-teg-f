@@ -29,8 +29,7 @@ function toggleIsLiked(heart, button) {
 function setButtonText(heart, button) {
   if ([...heart.classList].includes('is-liked')) {
     setTimeout(
-      () => (button.querySelector('.button__text').textContent = 'Unlike'
-    ),   
+      () => (button.querySelector('.button__text').textContent = 'Unlike'),
       500
     );
   } else {

@@ -246,7 +246,8 @@ ol {
 }
 
 .is-liked {
-  background-color: red;
+  fill: red;
+  color: red;
 }
 .like__container {
   display: -webkit-box;

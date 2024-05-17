@@ -9,6 +9,6 @@ mixin card(imgUrl, title, text,secondText, waterMark)
       p.card__text= secondText
       .like__container
         .card__icon-button
-          img.like-icon.is-liked(src='../images/heart.svg', alt="лайк") 
+          include ./heart
         button.card__like-button
           p.button__text Like
