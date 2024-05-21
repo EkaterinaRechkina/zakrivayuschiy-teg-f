@@ -4,11 +4,12 @@
   align-items: center;
   gap: 8px;
   margin: 0 auto 102px;
-  border: 2px solid black;
+  border: 2px solid $accent-color;
   padding: 18.5px 21px;
-  font-family: "PressStart2P-Regular", system-ui;
-  background-color: white;
+  font-family:  $main-font;
+  background-color: $base-color;
   &:hover {
     cursor: pointer;
+    animation: paintingBlack 0.5s ease-in-out;
   }
 }

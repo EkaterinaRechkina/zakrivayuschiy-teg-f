@@ -14,16 +14,30 @@
 
 */
 
+
 .page {
   min-inline-size: 320px;
   min-block-size: 100dvb;
-  background-image: repeating-linear-gradient(to right, #d3d3d3 0 2px, transparent 2px 4px),
-  repeating-linear-gradient(to bottom, #d3d3d3 0 2px, transparent 2px 4px),
-  linear-gradient(#E7E7E7 0.01%,  #1A1A1A);
+  color: $accent-color;
+  // background-image: repeating-linear-gradient(
+  //     to right,
+  //     $gradient-inline 0 2px,
+  //     transparent 2px 4px
+  //   ),
+  //   repeating-linear-gradient(
+  //     to bottom,
+  //     $gradient-inline 0 2px,
+  //     transparent 2px 4px
+  //   ),
+  //   linear-gradient($gradient-block-start 0.01%, $gradient-block-end);
+
+  // TEST
+  background-color: $accent-color;
 }
 
 .container {
   max-inline-size: 696px;
   margin: 0 auto;
 }
+
 

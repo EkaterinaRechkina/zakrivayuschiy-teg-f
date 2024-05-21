@@ -1,7 +1,7 @@
 .popup {
-  font-family: "PressStart2P-Regular", system-ui;
+  font-family: $main-font;
   inline-size: 353px;
-  border: 2px solid black;
+  border: 2px solid $accent-color;
   padding: 31.5px;
-  background-color: white;
+  background-color: $base-color;
 }

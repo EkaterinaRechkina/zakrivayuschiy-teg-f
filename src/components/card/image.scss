@@ -2,3 +2,34 @@
   width: 100%;
   aspect-ratio: 1/1;
 }
+.blur {
+filter: blur(5px);
+}
+
+.contrast {
+  filter: contrast(200%);
+}
+
+.grayscale {
+  filter: grayscale(50%);
+}
+
+.hue-rotate {
+  filter: hue-rotate(90deg);
+}
+
+.drop-shadow {
+  filter: drop-shadow(-6px 6px 6px red);
+}
+
+.brightness {
+  filter: brightness(75%);
+}
+
+.opacity {
+  filter: opacity(30%);
+}
+
+.sepia {
+  filter: sepia(60%);
+}

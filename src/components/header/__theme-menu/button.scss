@@ -3,16 +3,19 @@
   background: inherit;
   padding: 0;
   position: relative;
+  text-transform: uppercase;
   &:hover {
     cursor: pointer;
   }
-  &:active {
+  &:disabled{
     opacity: 0.6;
     color: black;
     &::before {
       content: "▶";
       display: inline-block;
-      animation: backandforth 1.5s infinite;
+      position: absolute;
+      left: -30px;
+      animation: backandforth 0.5s alternate ease-in-out infinite;
     }
   }
   &::after {
@@ -40,14 +43,11 @@
 }
 
 @keyframes backandforth {
-	0% {
+	from {
 		transform: translateX(0);
 	}
-	50% {
-		transform: translateX(-5px);
-	}
-	100% {
-		transform: translateX(0);
+	to {
+		transform: translateX(4px);
 	}
 }
 

@@ -10,6 +10,7 @@ function changeTheme(theme) {
 (function initTheme() {
   const theme = localStorage.getItem('theme');
   if (theme) {
+    console.log(theme)
     changeTheme(theme);
   }
 })();

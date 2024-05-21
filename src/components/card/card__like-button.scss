@@ -1,30 +1,30 @@
 .card__like-button {
   padding:  12.5px 37px;
-  border: 2px solid black;
+  border: 2px solid $accent-color;
   background-color: inherit;
   text-transform: uppercase;
   &:hover {
     cursor: pointer;
-    animation: paintingBlack 2s;
+    animation: paintingBlack 0.5s ease-in-out;
   }
   &:focus {
     outline: none; 
   }
   &:focus-visible {
-    box-shadow: 2px 2px 0 black;
+    box-shadow: 2px 2px 0 $accent-color;
   }
 }
 
 @keyframes paintingBlack {
 	0% {
-		box-shadow: inset 0 0 0 0 #000;
+		box-shadow: inset 0 0 0 0 $accent-color;
 	}
 	50% {
-		box-shadow: inset 10vw 0 0 0 #000;
+		box-shadow: inset 10vw 0 0 0 $accent-color;
     color: #fff;
 	}
 	100% {
-		box-shadow: inset 100vw 0 0 0 #000;
+		box-shadow: inset 100vw 0 0 0 $accent-color;
     color: #fff;
 	}
 }

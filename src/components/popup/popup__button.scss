@@ -1,6 +1,10 @@
 .popup__button {
   font-size: 14px;
   line-height: 0.9;
-  border: 2px solid black;
+  border: 2px solid $accent-color;
   padding: 12.5px 132.5px;
+  &:hover {
+    cursor: pointer;
+    animation: paintingBlack 0.5s ease-in-out;
+  }
 }

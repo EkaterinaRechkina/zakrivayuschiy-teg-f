@@ -1,13 +1,77 @@
 .like-icon {
-  inline-size: 27px;
-  height: 24px;
   display: inline-block;
+  height: 39px;
+  inline-size: 36px;
   &:hover {
     cursor: pointer;
+    .core {
+      fill:black;
+      transition: fill 0.3s linear;
+    }
+    .main-body {
+      fill: black;
+      transition: fill 0.3s linear 0.05s;
+    }
+  }
+  &:active {
+    .core{
+      fill: red;
+      transition: fill 0.3s linear;
+    }
+    .main-body {
+      fill: red;
+      transition: fill 0.3s linear 0.05s;
+    }
+  }
+  .core {
+    fill: transparent;
+    transition: fill 0.1s linear;
+  }
+  .main-body {
+    fill: transparent;
+    transition: fill 0.3s linear;
+  }
+  .is-liked {
+    animation:heartScale 0.3s ease-in 1;
+    animation-delay: 0.1s;
+    animation-direction: alternate;
+    .contour {
+      fill: red;
+      transition: fill 0.3s linear 0.06s;
+    }
+    .core {
+      fill: red;
+      transition: fill 0.3s linear;
+    }
+    .main-body {
+      fill: red;
+      transition: fill 0.3s linear 0.05s;
+    }
+    .sparks {
+      animation: sparks 0.3s ease-in 1;
+      animation-delay: 0.3s;
+      animation-direction: alternate;
+    }
   }
 }
-.is-liked {
-  // need to be fixed
-  fill: red;
-  color: red;
+
+
+@keyframes sparks {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 100%;
+  }
+}
+
+@keyframes heartScale {
+  from {
+    transform: scale(1);
+  }
+
+  to {
+    transform: scale(1.5);
+  }
 }
