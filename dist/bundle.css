@@ -375,7 +375,7 @@ ol {
   transition: fill 0.3s linear;
 }
 
-.like-icon .is-liked {
+.like-icon.is-liked {
   -webkit-animation: heartScale 0.3s ease-in 1;
           animation: heartScale 0.3s ease-in 1;
   -webkit-animation-delay: 0.1s;
@@ -384,28 +384,29 @@ ol {
           animation-direction: alternate;
 }
 
-.like-icon .is-liked .contour {
+.like-icon.is-liked .contour {
   fill: var(--heart-active);
   -webkit-transition: fill 0.3s linear 0.06s;
   -o-transition: fill 0.3s linear 0.06s;
   transition: fill 0.3s linear 0.06s;
 }
 
-.like-icon .is-liked .core {
+.like-icon.is-liked .core {
   fill: var(--heart-active);
   -webkit-transition: fill 0.3s linear;
   -o-transition: fill 0.3s linear;
   transition: fill 0.3s linear;
 }
 
-.like-icon .is-liked .main-body {
+.like-icon.is-liked .main-body {
   fill: var(--heart-active);
   -webkit-transition: fill 0.3s linear 0.05s;
   -o-transition: fill 0.3s linear 0.05s;
   transition: fill 0.3s linear 0.05s;
 }
 
-.like-icon .is-liked .sparks {
+.like-icon.is-liked .sparks {
+  fill: var(--heart-active);
   -webkit-animation: sparks 0.3s ease-in 1;
           animation: sparks 0.3s ease-in 1;
   -webkit-animation-delay: 0.3s;
