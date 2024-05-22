@@ -28,8 +28,6 @@
 *::before {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-  font-size: 18px;
-  line-height: 1.17;
 }
 
 body {
@@ -538,14 +536,13 @@ ol {
 }
 
 .header__text {
-  font-size: 23px;
+  font-size: clamp(0.875rem, 0.6769rem + 0.8451vw, 1.4375rem);
   line-height: 1;
   -webkit-margin-after: 25px;
           margin-block-end: 25px;
 }
 
 .header__title {
-  font-size: 65px;
   line-height: 1;
   -webkit-margin-after: 20px;
           margin-block-end: 20px;
@@ -645,6 +642,10 @@ ol {
   line-height: 1;
 }
 
+.theme-menu__item {
+  font-size: 14px;
+}
+
 #popover::-webkit-backdrop {
   background-color: rgba(0, 0, 0, 0.75);
 }
@@ -708,5 +709,14 @@ ol {
     --accent-color: #00cc14;
     --base-color: #000;
     --heart-active: #f00;
+  }
+}
+
+@media (width >= 375px){
+  .header__text {
+    font-size: clamp(0.875rem, 0.6769rem + 0.8451vw, 1.4375rem);
+  }
+  .header__title {
+    font-size: clamp(3.0625rem, 2.7104rem + 1.5023vw, 4.0625rem);
   }
 }

@@ -1,5 +1,10 @@
 .header__title {
-  font-size: 65px;
   line-height: 1;
   margin-block-end: 20px;
+}
+
+@media (width >= 375px){
+  .header__title {
+    font-size: clamp(3.0625rem, 2.7104rem + 1.5023vw, 4.0625rem);
+  }
 }
