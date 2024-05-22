@@ -1,0 +1,711 @@
+@charset "UTF-8";
+
+:root {
+  --main-font: "PressStart2P-Regular", system-ui;
+  --text-font: "Inter-Variable",sans-serif;
+  --gradient-inline: #d3d3d3;
+  --gradient-block-start: #e7e7e7;
+  --gradient-block-end: #1a1a1a;
+  --accent-color: #000;
+  --base-color: #fff;
+  --heart-active: #f00;
+}
+
+@font-face {
+  font-display: swap;
+  font-family: "Inter-Variable";
+  src: local("Inter-Variable"), url("../fonts/Inter-Variable.woff2") format("woff2 supports variations"), url("../fonts/Inter-Variable.woff2") format("woff2-variations");
+}
+
+@font-face {
+  font-display: swap;
+  font-family: "PressStart2P-Regular";
+  src: local("PressStart2P-Regular"), url("../fonts/PressStart2P-Regular.woff") format("woff");
+}
+
+*,
+*::after,
+*::before {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-size: 18px;
+  line-height: 1.17;
+}
+
+body {
+  margin: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ul,
+ol,
+li {
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  color: inherit;
+}
+
+button,
+input {
+  color: currentColor;
+  font-family: inherit;
+  font-size: inherit;
+}
+
+ul,
+ol {
+  list-style: none;
+}
+
+.visually-hidden {
+  position: absolute;
+  inline-size: 1px;
+  block-size: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  white-space: nowrap;
+}
+
+/* Здесь вы напишете основную часть стилей страницы.
+
+Будьте внимательны! Для корректной работы скриптов на этом сайте нужно, чтобы в HTML некоторые классы были названы особым образом:
+✦ theme-dark — класс тёмной темы
+✦ theme-light — класс светлой темы
+✦ like-icon — для svg-иконки анимированного сердца
+✦ card__like-button — для кнопки Like рядом с иконкой
+✦ card__icon-button — для кнопки, оборачивающей иконку
+✦ card__icon-button — для кнопки, оборачивающей иконку
+✦ is-liked — для обозначения состояния лайкнутой иконки в виде сердца
+✦ button__text — для обозначения текстового элемента внутри кнопки
+
+Кроме этого, не меняйте HTML переключателя тем. Его разметка также гарантирует работу своего скрипта.
+
+*/
+
+.page {
+  min-inline-size: 320px;
+  min-block-size: 100dvb;
+  color: var(--accent-color);
+  background-image: repeating-linear-gradient(to right, var(--gradient-inline) 0 2px, transparent 2px 4px), repeating-linear-gradient(to bottom, var(--gradient-inline) 0 2px, transparent 2px 4px), -webkit-gradient(linear, left top, left bottom, color-stop(0.01%, var(--gradient-block-start)), to(var(--gradient-block-end)));
+  background-image: -o-repeating-linear-gradient(left, var(--gradient-inline) 0 2px, transparent 2px 4px), -o-repeating-linear-gradient(top, var(--gradient-inline) 0 2px, transparent 2px 4px), -o-linear-gradient(var(--gradient-block-start) 0.01%, var(--gradient-block-end));
+  background-image: repeating-linear-gradient(to right, var(--gradient-inline) 0 2px, transparent 2px 4px), repeating-linear-gradient(to bottom, var(--gradient-inline) 0 2px, transparent 2px 4px), linear-gradient(var(--gradient-block-start) 0.01%, var(--gradient-block-end));
+}
+
+.container {
+  max-inline-size: 696px;
+  margin: 0 auto;
+}
+
+:root.theme-light {
+  --main-font: "PressStart2P-Regular";
+  --text-font: "Inter-Variable";
+  --gradient-inline: #d3d3d3;
+  --gradient-block-start: #e7e7e7;
+  --gradient-block-end: #1a1a1a;
+  --accent-color: #000;
+  --base-color: #fff;
+  --heart-active: #f00;
+}
+
+:root.theme-dark {
+  --gradient-inline: #000;
+  --gradient-block-start: #007f0c;
+  --gradient-block-end: #004306;
+  --accent-color: #00cc14;
+  --base-color: #000;
+  --heart-active: #f00;
+}
+
+.button__save {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 8px;
+  margin: 0 auto 102px;
+  border: 2px solid var(--accent-color);
+  padding: 18.5px 21px;
+  font-family: var(--main-font);
+  background-color: var(--base-color);
+}
+
+.button__save:hover {
+  cursor: pointer;
+  -webkit-animation: paintingBlack 0.5s ease-in-out;
+          animation: paintingBlack 0.5s ease-in-out;
+}
+
+.svg__container-button {
+  inline-size: 21px;
+  block-size: 21px;
+}
+
+.text__save {
+  font-size: 14px;
+  line-height: 0.9;
+}
+
+.card__block {
+  position: relative;
+  -webkit-margin-after: 27px;
+          margin-block-end: 27px;
+}
+
+.button__text {
+  font-family: var(--main-font);
+  font-size: 14px;
+  line-height: 0.9;
+}
+
+.card {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  border: 2px solid var(--accent-color);
+  font-family: var(--text-font);
+  background-color: var(--base-color);
+}
+
+.card__icon-button {
+  -ms-flex-item-align: center;
+      align-self: center;
+}
+
+.main-body {
+  fill: none;
+}
+
+.core {
+  fill: none;
+}
+
+.sparks {
+  fill: none;
+}
+
+.card__like-button {
+  padding: 12.5px 37px;
+  border: 2px solid var(--accent-color);
+  background-color: inherit;
+  text-transform: uppercase;
+}
+
+.card__like-button:hover {
+  cursor: pointer;
+  -webkit-animation: paintingBlack 0.5s ease-in-out;
+          animation: paintingBlack 0.5s ease-in-out;
+}
+
+.card__like-button:focus {
+  outline: none;
+}
+
+.card__like-button:focus-visible {
+  -webkit-box-shadow: 2px 2px 0 var(--accent-color);
+          box-shadow: 2px 2px 0 var(--accent-color);
+}
+
+@-webkit-keyframes paintingBlack {
+  0% {
+    -webkit-box-shadow: inset 0 0 0 0 var(--accent-color);
+            box-shadow: inset 0 0 0 0 var(--accent-color);
+  }
+
+  50% {
+    -webkit-box-shadow: inset 10vw 0 0 0 var(--accent-color);
+            box-shadow: inset 10vw 0 0 0 var(--accent-color);
+    color: #fff;
+  }
+
+  100% {
+    -webkit-box-shadow: inset 100vw 0 0 0 var(--accent-color);
+            box-shadow: inset 100vw 0 0 0 var(--accent-color);
+    color: #fff;
+  }
+}
+
+@keyframes paintingBlack {
+  0% {
+    -webkit-box-shadow: inset 0 0 0 0 var(--accent-color);
+            box-shadow: inset 0 0 0 0 var(--accent-color);
+  }
+
+  50% {
+    -webkit-box-shadow: inset 10vw 0 0 0 var(--accent-color);
+            box-shadow: inset 10vw 0 0 0 var(--accent-color);
+    color: #fff;
+  }
+
+  100% {
+    -webkit-box-shadow: inset 100vw 0 0 0 var(--accent-color);
+            box-shadow: inset 100vw 0 0 0 var(--accent-color);
+    color: #fff;
+  }
+}
+
+.card__content {
+  padding: 0 20px 25px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 27px;
+}
+
+.card__img {
+  width: 100%;
+  aspect-ratio: 1/1;
+}
+
+.blur {
+  -webkit-filter: blur(5px);
+          filter: blur(5px);
+}
+
+.contrast {
+  -webkit-filter: contrast(200%);
+          filter: contrast(200%);
+}
+
+.grayscale {
+  -webkit-filter: grayscale(50%);
+          filter: grayscale(50%);
+}
+
+.hue-rotate {
+  -webkit-filter: hue-rotate(90deg);
+          filter: hue-rotate(90deg);
+}
+
+.drop-shadow {
+  -webkit-filter: drop-shadow(-6px 6px 6px red);
+          filter: drop-shadow(-6px 6px 6px red);
+}
+
+.brightness {
+  -webkit-filter: brightness(75%);
+          filter: brightness(75%);
+}
+
+.opacity {
+  -webkit-filter: opacity(30%);
+          filter: opacity(30%);
+}
+
+.sepia {
+  -webkit-filter: sepia(60%);
+          filter: sepia(60%);
+}
+
+.like-icon {
+  display: inline-block;
+  height: 39px;
+  inline-size: 36px;
+}
+
+.like-icon .contour {
+  fill: var(--accent-color);
+}
+
+.like-icon:hover {
+  cursor: pointer;
+}
+
+.like-icon:hover .core {
+  fill: var(--accent-color);
+  -webkit-transition: fill 0.3s linear;
+  -o-transition: fill 0.3s linear;
+  transition: fill 0.3s linear;
+}
+
+.like-icon:hover .main-body {
+  fill: var(--accent-color);
+  -webkit-transition: fill 0.3s linear 0.05s;
+  -o-transition: fill 0.3s linear 0.05s;
+  transition: fill 0.3s linear 0.05s;
+}
+
+.like-icon:active .core {
+  fill: var(--heart-active);
+  -webkit-transition: fill 0.3s linear;
+  -o-transition: fill 0.3s linear;
+  transition: fill 0.3s linear;
+}
+
+.like-icon:active .main-body {
+  fill: var(--heart-active);
+  -webkit-transition: fill 0.3s linear 0.05s;
+  -o-transition: fill 0.3s linear 0.05s;
+  transition: fill 0.3s linear 0.05s;
+}
+
+.like-icon .core {
+  fill: transparent;
+  -webkit-transition: fill 0.1s linear;
+  -o-transition: fill 0.1s linear;
+  transition: fill 0.1s linear;
+}
+
+.like-icon .main-body {
+  fill: transparent;
+  -webkit-transition: fill 0.3s linear;
+  -o-transition: fill 0.3s linear;
+  transition: fill 0.3s linear;
+}
+
+.like-icon .is-liked {
+  -webkit-animation: heartScale 0.3s ease-in 1;
+          animation: heartScale 0.3s ease-in 1;
+  -webkit-animation-delay: 0.1s;
+          animation-delay: 0.1s;
+  -webkit-animation-direction: alternate;
+          animation-direction: alternate;
+}
+
+.like-icon .is-liked .contour {
+  fill: var(--heart-active);
+  -webkit-transition: fill 0.3s linear 0.06s;
+  -o-transition: fill 0.3s linear 0.06s;
+  transition: fill 0.3s linear 0.06s;
+}
+
+.like-icon .is-liked .core {
+  fill: var(--heart-active);
+  -webkit-transition: fill 0.3s linear;
+  -o-transition: fill 0.3s linear;
+  transition: fill 0.3s linear;
+}
+
+.like-icon .is-liked .main-body {
+  fill: var(--heart-active);
+  -webkit-transition: fill 0.3s linear 0.05s;
+  -o-transition: fill 0.3s linear 0.05s;
+  transition: fill 0.3s linear 0.05s;
+}
+
+.like-icon .is-liked .sparks {
+  -webkit-animation: sparks 0.3s ease-in 1;
+          animation: sparks 0.3s ease-in 1;
+  -webkit-animation-delay: 0.3s;
+          animation-delay: 0.3s;
+  -webkit-animation-direction: alternate;
+          animation-direction: alternate;
+}
+
+@-webkit-keyframes sparks {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 100%;
+  }
+}
+
+@keyframes sparks {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 100%;
+  }
+}
+
+@-webkit-keyframes heartScale {
+  from {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+
+  to {
+    -webkit-transform: scale(1.5);
+            transform: scale(1.5);
+  }
+}
+
+@keyframes heartScale {
+  from {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+
+  to {
+    -webkit-transform: scale(1.5);
+            transform: scale(1.5);
+  }
+}
+
+.like__container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 12px;
+}
+
+.like__container:focus {
+  outline: none;
+}
+
+.like__container:focus-visible {
+  outline: 2px solid;
+  outline-offset: 2px;
+}
+
+.card__title {
+  font-size: 18px;
+  line-height: 1.21;
+  font-weight: 700;
+  padding: 3px 10px;
+}
+
+.card__watermark {
+  position: absolute;
+  color: black;
+  -webkit-text-stroke: 1px white;
+  text-shadow: -1px 0 white, 0 1px white, 1px 0 white, 0 -1px white;
+  right: 25px;
+  top: 25px;
+  font-family: var(--main-font);
+  z-index: 3;
+}
+
+.cards-list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 54px;
+  -webkit-margin-after: 54px;
+          margin-block-end: 54px;
+}
+
+.header {
+  font-family: var(--main-font);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border: 2px solid var(--accent-color);
+  -webkit-margin-before: 100px;
+          margin-block-start: 100px;
+  -webkit-margin-after: 102px;
+          margin-block-end: 102px;
+  padding: 132px 0 25px;
+  background-color: var(--base-color);
+  text-transform: uppercase;
+}
+
+.header__text {
+  font-size: 23px;
+  line-height: 1;
+  -webkit-margin-after: 25px;
+          margin-block-end: 25px;
+}
+
+.header__title {
+  font-size: 65px;
+  line-height: 1;
+  -webkit-margin-after: 20px;
+          margin-block-end: 20px;
+}
+
+.theme-menu__button {
+  border: none;
+  background: inherit;
+  padding: 0;
+  position: relative;
+  text-transform: uppercase;
+}
+
+.theme-menu__button:hover {
+  cursor: pointer;
+}
+
+.theme-menu__button:disabled {
+  opacity: 0.6;
+  color: var(--accent-color);
+}
+
+.theme-menu__button:disabled::before {
+  content: "▶";
+  display: inline-block;
+  position: absolute;
+  left: -30px;
+  -webkit-animation: backandforth 0.5s alternate ease-in-out infinite;
+          animation: backandforth 0.5s alternate ease-in-out infinite;
+}
+
+.theme-menu__button::after {
+  content: "";
+  width: 0px;
+  height: 2px;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background: black;
+  opacity: 0.6;
+  -webkit-transition: 400ms;
+  -o-transition: 400ms;
+  transition: 400ms;
+}
+
+.theme-menu__button:focus {
+  outline: none;
+}
+
+.theme-menu__button:focus-visible {
+  opacity: 0.6;
+  color: black;
+}
+
+.theme-menu__button:focus-visible::after {
+  width: 100%;
+}
+
+@-webkit-keyframes backandforth {
+  from {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+
+  to {
+    -webkit-transform: translateX(4px);
+            transform: translateX(4px);
+  }
+}
+
+@keyframes backandforth {
+  from {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+
+  to {
+    -webkit-transform: translateX(4px);
+            transform: translateX(4px);
+  }
+}
+
+.theme-menu__list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  list-style-type: none;
+  gap: 14px;
+}
+
+.header__theme-menu {
+  font-size: 14px;
+  line-height: 1;
+}
+
+#popover::-webkit-backdrop {
+  background-color: rgba(0, 0, 0, 0.75);
+}
+
+#popover::backdrop {
+  background-color: rgba(0, 0, 0, 0.75);
+}
+
+.popup {
+  font-family: var(--main-font);
+  inline-size: 353px;
+  border: 2px solid var(--accent-color);
+  padding: 31.5px;
+  background-color: var(--base-color);
+  color: var(--accent-color);
+}
+
+.popup__button {
+  font-size: 14px;
+  line-height: 0.9;
+  border: 2px solid var(--accent-color);
+  padding: 12.5px 132.5px;
+}
+
+.popup__button:hover {
+  cursor: pointer;
+  -webkit-animation: paintingBlack 0.5s ease-in-out;
+          animation: paintingBlack 0.5s ease-in-out;
+}
+
+.popup__container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  gap: 20px;
+  -webkit-margin-after: 30px;
+          margin-block-end: 30px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.svg__container-popup {
+  inline-size: 39px;
+  block-size: 39px;
+}
+
+.text__popup {
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+@media (prefers-color-sheme: dark){
+  :root {
+    --gradient-inline: #000;
+    --gradient-block-start: #007f0c;
+    --gradient-block-end: #004306;
+    --accent-color: #00cc14;
+    --base-color: #000;
+    --heart-active: #f00;
+  }
+}
