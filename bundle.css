@@ -1,5 +1,17 @@
 @charset "UTF-8";
 
+@font-face {
+  font-display: swap;
+  font-family: "Inter-Variable";
+  src: local("Inter-Variable"), url("fonts/Inter-Variable.woff2") format("woff2 supports variations"), url("fonts/Inter-Variable.woff2") format("woff2-variations");
+}
+
+@font-face {
+  font-display: swap;
+  font-family: "PressStart2P-Regular";
+  src: local("PressStart2P-Regular"), url("fonts/PressStart2P-Regular.woff") format("woff");
+}
+
 :root {
   --main-font: "PressStart2P-Regular", system-ui;
   --text-font: "Inter-Variable",sans-serif;
@@ -9,18 +21,6 @@
   --accent-color: #000;
   --base-color: #fff;
   --heart-active: #f00;
-}
-
-@font-face {
-  font-display: swap;
-  font-family: "Inter-Variable";
-  src: local("Inter-Variable"), url("../fonts/Inter-Variable.woff2") format("woff2 supports variations"), url("../fonts/Inter-Variable.woff2") format("woff2-variations");
-}
-
-@font-face {
-  font-display: swap;
-  font-family: "PressStart2P-Regular";
-  src: local("PressStart2P-Regular"), url("../fonts/PressStart2P-Regular.woff") format("woff");
 }
 
 *,
