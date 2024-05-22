@@ -10,4 +10,4 @@
 
 ## git@github.com:EkaterinaRechkina/zakrivayuschiy-teg-f.git
 
-## [page](https://ekaterinarechkina.github.io/zakrivayuschiy-teg-f/)
+## [GithubPage](https://ekaterinarechkina.github.io/zakrivayuschiy-teg-f/)
