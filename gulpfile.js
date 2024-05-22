@@ -97,10 +97,10 @@ function watchFiles() {
   gulp.watch(['src/**/*.js'], js); 
 }
 
-gulp.task('deploy', function() {
-  return gulp.src('./dist/**/*')
-      .pipe(ghPages());
-});
+// gulp.task('deploy', function() {
+//   return gulp.src('./dist/**/*')
+//       .pipe(ghPages());
+// });
 
 const build = gulp.series(clean, gulp.parallel(pug, scss, images,fonts, js,));
 const watchapp = gulp.parallel(build, watchFiles, serve);

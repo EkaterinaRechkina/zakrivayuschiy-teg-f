@@ -21,6 +21,7 @@
   --accent-color: #000;
   --base-color: #fff;
   --heart-active: #f00;
+  --stroke: #fff;
 }
 
 *,
@@ -113,6 +114,7 @@ ol {
   --accent-color: #000;
   --base-color: #fff;
   --heart-active: #f00;
+  --stroke: #fff;
 }
 
 :root.theme-dark {
@@ -122,6 +124,7 @@ ol {
   --accent-color: #00cc14;
   --base-color: #000;
   --heart-active: #f00;
+  --stroke: #000;
 }
 
 .button__save {
@@ -186,6 +189,8 @@ ol {
 .card__icon-button {
   -ms-flex-item-align: center;
       align-self: center;
+  border: none;
+  background-color: transparent;
 }
 
 .main-body {
@@ -273,7 +278,7 @@ ol {
 }
 
 .card__img {
-  width: 100%;
+  inline-size: 100%;
   aspect-ratio: 1/1;
 }
 
@@ -313,8 +318,8 @@ ol {
 }
 
 .sepia {
-  -webkit-filter: sepia(60%);
-          filter: sepia(60%);
+  -webkit-filter: sepia(60%) opacity(30%);
+          filter: sepia(60%) opacity(30%);
 }
 
 .like-icon {
@@ -488,9 +493,9 @@ ol {
 
 .card__watermark {
   position: absolute;
-  color: black;
-  -webkit-text-stroke: 1px white;
-  text-shadow: -1px 0 white, 0 1px white, 1px 0 white, 0 -1px white;
+  color: var(--accent-color);
+  -webkit-text-stroke: 1px var(--stroke);
+  text-shadow: -1px 0 var(--stroke), 0 1px var(--stroke), 1px 0 var(--stroke), 0 -1px var(--stroke);
   right: 25px;
   top: 25px;
   font-family: var(--main-font);
@@ -535,14 +540,14 @@ ol {
   text-transform: uppercase;
 }
 
-.header__text {
+.header__title {
   font-size: clamp(0.875rem, 0.6769rem + 0.8451vw, 1.4375rem);
   line-height: 1;
   -webkit-margin-after: 25px;
           margin-block-end: 25px;
 }
 
-.header__title {
+.header__text {
   line-height: 1;
   -webkit-margin-after: 20px;
           margin-block-end: 20px;
@@ -576,12 +581,12 @@ ol {
 
 .theme-menu__button::after {
   content: "";
-  width: 0px;
-  height: 2px;
+  inline-size: 0;
+  block-size: 2px;
   position: absolute;
   top: 100%;
   left: 0;
-  background: black;
+  background: var(--accent-color);
   opacity: 0.6;
   -webkit-transition: 400ms;
   -o-transition: 400ms;
@@ -594,11 +599,11 @@ ol {
 
 .theme-menu__button:focus-visible {
   opacity: 0.6;
-  color: black;
+  color: var(--accent-color);
 }
 
 .theme-menu__button:focus-visible::after {
-  width: 100%;
+  inline-size: 100%;
 }
 
 @-webkit-keyframes backandforth {
@@ -637,13 +642,9 @@ ol {
   gap: 14px;
 }
 
-.header__theme-menu {
-  font-size: 14px;
-  line-height: 1;
-}
-
 .theme-menu__item {
   font-size: 14px;
+  line-height: 1;
 }
 
 #popover::-webkit-backdrop {
@@ -656,7 +657,7 @@ ol {
 
 .popup {
   font-family: var(--main-font);
-  inline-size: 353px;
+  max-inline-size: 353px;
   border: 2px solid var(--accent-color);
   padding: 31.5px;
   background-color: var(--base-color);
@@ -709,14 +710,18 @@ ol {
     --accent-color: #00cc14;
     --base-color: #000;
     --heart-active: #f00;
+    --stroke: #000;
   }
 }
 
 @media (width >= 375px){
-  .header__text {
+  .header__title {
     font-size: clamp(0.875rem, 0.6769rem + 0.8451vw, 1.4375rem);
   }
-  .header__title {
+  .header__text {
     font-size: clamp(3.0625rem, 2.7104rem + 1.5023vw, 4.0625rem);
+  }
+  .popup {
+    max-inline-size: 341px;
   }
 }

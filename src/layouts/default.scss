@@ -19,8 +19,8 @@
 @import '../components/card/watermark.scss';
 @import '../components/cards-list/cards-list.scss';
 @import '../components/header/header.scss';
-@import '../components/header/text.scss';
-@import '../components/header/title.scss';
+@import '../components/header/_title';
+@import '../components/header/_text';
 @import '../components/header/__theme-menu/button.scss';
 @import '../components/header/__theme-menu/list.scss';
 @import '../components/header/__theme-menu/theme-menu.scss';

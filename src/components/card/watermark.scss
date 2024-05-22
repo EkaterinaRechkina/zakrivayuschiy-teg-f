@@ -1,8 +1,8 @@
 .card__watermark {
   position: absolute;
-  color: black;
-  -webkit-text-stroke: 1px white;
-  text-shadow: -1px 0 white, 0 1px white, 1px 0 white, 0 -1px white;
+  color: var(--accent-color);
+  -webkit-text-stroke: 1px var(--stroke);
+  text-shadow: -1px 0 var(--stroke), 0 1px var(--stroke), 1px 0 var(--stroke), 0 -1px var(--stroke);
   right: 25px;
   top: 25px;
   font-family:  var(--main-font);

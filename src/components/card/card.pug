@@ -1,14 +1,15 @@
 mixin card(imgUrl, title, text,secondText, waterMark, className)
-  article.card
-    h3.card__title= title
-    .card__block
-      p.card__watermark= waterMark
-      img.card__img(class=className src=imgUrl, alt=title)
-    .card__content
-      p.card__text= text
-      p.card__text= secondText
-      .like__container
-        .card__icon-button
-          include ./heart
-        button.card__like-button
-          p.button__text Like
+  li
+    article.card
+      h2.card__title= title
+      .card__block
+        span.card__watermark(aria-hidden='true')=waterMark
+        img.card__img(class=className src=imgUrl, alt=title,loading='lazy')
+      .card__content
+        p.card__text= text
+        p.card__text= secondText
+        .like__container
+          button.card__icon-button(type='button')
+            include ./heart
+          button.card__like-button
+            span.button__text Like

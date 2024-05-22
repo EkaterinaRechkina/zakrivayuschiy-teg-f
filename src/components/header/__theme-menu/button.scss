@@ -20,12 +20,12 @@
   }
   &::after {
     content: "";
-    width: 0px;
-    height: 2px;
+    inline-size: 0;
+    block-size: 2px;
     position: absolute;
     top: 100%;
     left: 0;
-    background: black;
+    background: var(--accent-color);
     opacity: 0.6;
     transition: 400ms;
   }
@@ -35,9 +35,9 @@
   }
   &:focus-visible {
     opacity: 0.6;
-    color: black;
+    color: var(--accent-color);
     &::after {
-      width: 100%;
+      inline-size: 100%;
     }
   }
 }

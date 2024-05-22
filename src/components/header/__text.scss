@@ -1,10 +1,10 @@
-.header__title {
+.header__text {
   line-height: 1;
   margin-block-end: 20px;
 }
 
 @media (width >= 375px){
-  .header__title {
+  .header__text {
     font-size: clamp(3.0625rem, 2.7104rem + 1.5023vw, 4.0625rem);
   }
 }
