@@ -1,13 +1,13 @@
 .header {
-  font-family: $main-font;
+  font-family:  var(--main-font);
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
-  border: 2px solid $accent-color;
+  border: 2px solid var(--accent-color);
   margin-block-start: 100px;
   margin-block-end: 102px;
   padding: 132px 0 25px;
-  background-color: $base-color;
+  background-color: var(--base-color);
   text-transform: uppercase;
 }

@@ -4,10 +4,10 @@
   align-items: center;
   gap: 8px;
   margin: 0 auto 102px;
-  border: 2px solid $accent-color;
+  border: 2px solid var(--accent-color);
   padding: 18.5px 21px;
-  font-family:  $main-font;
-  background-color: $base-color;
+  font-family: var(--main-font);
+  background-color: var(--base-color);
   &:hover {
     cursor: pointer;
     animation: paintingBlack 0.5s ease-in-out;

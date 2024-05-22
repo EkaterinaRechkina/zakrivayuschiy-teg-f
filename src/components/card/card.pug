@@ -3,7 +3,7 @@ mixin card(imgUrl, title, text,secondText, waterMark, className)
     h3.card__title= title
     .card__block
       p.card__watermark= waterMark
-      img.card__image(class=className)(src=imgUrl, alt=title)
+      img(class=className)(src=imgUrl, alt=title)
     .card__content
       p.card__text= text
       p.card__text= secondText

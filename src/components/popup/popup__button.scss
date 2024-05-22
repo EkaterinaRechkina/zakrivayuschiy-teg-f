@@ -1,7 +1,7 @@
 .popup__button {
   font-size: 14px;
   line-height: 0.9;
-  border: 2px solid $accent-color;
+  border: 2px solid var(--accent-color);
   padding: 12.5px 132.5px;
   &:hover {
     cursor: pointer;

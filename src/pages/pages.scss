@@ -1,31 +1,34 @@
 
 :root{
 &.theme-light {
-	$main-font: "PressStart2P-Regular";
-	$text-font: "Inter-Variable";
-	$gradient-inline: #d3d3d3;
-	$gradient-block-start: #e7e7e7;
-	$gradient-block-end: #1a1a1a;
-	$accent-color: #000;
-	$base-color: #fff;
+	--main-font: "PressStart2P-Regular";
+	--text-font: "Inter-Variable";
+	--gradient-inline: #d3d3d3;
+	--gradient-block-start: #e7e7e7;
+	--gradient-block-end: #1a1a1a;
+	--accent-color: #000;
+	--base-color: #fff;
+	--heart-active: #f00;
 }
 }
 :root {
   &.theme-dark {
-	$gradient-inline: #000;
-	$gradient-block-start: #007f0c;
-	$gradient-block-end: #004306;
-	$accent-color: #00cc14;
-	$base-color: #000;
+	--gradient-inline: #000;
+	--gradient-block-start: #007f0c;
+	--gradient-block-end: #004306;
+	--accent-color: #00cc14;
+	--base-color: #000;
+	--heart-active: #f00;
 }
 }
 
 @media (prefers-color-sheme: dark) {
 	:root {
-		$gradient-inline: #000;
-		$gradient-block-start: #007f0c;
-		$gradient-block-end: #004306;
-		$accent-color: #00cc14;
-		$base-color: #000;
+		--gradient-inline: #000;
+		--gradient-block-start: #007f0c;
+		--gradient-block-end: #004306;
+		--accent-color: #00cc14;
+		--base-color: #000;
+		--heart-active: #f00;
 	}
 }

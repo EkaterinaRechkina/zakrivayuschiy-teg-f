@@ -1,8 +1,11 @@
-  $main-font: "PressStart2P-Regular", system-ui;
-  $text-font: "Inter-Variable",sans-serif;
-  $gradient-inline: #d3d3d3;
-  $gradient-block-start: #e7e7e7;
-  $gradient-block-end: #1a1a1a;
-  $accent-color: #000;
-  $base-color: #fff;
-  $heart-aactive: #000;
+  :root {
+  --main-font: "PressStart2P-Regular", system-ui;
+  --text-font: "Inter-Variable",sans-serif;
+  --gradient-inline: #d3d3d3;
+  --gradient-block-start: #e7e7e7;
+  --gradient-block-end: #1a1a1a;
+  --accent-color: #000;
+  --base-color: #fff;
+  --heart-active: #f00;
+  }
+

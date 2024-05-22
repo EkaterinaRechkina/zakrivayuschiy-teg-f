@@ -2,24 +2,27 @@
   display: inline-block;
   height: 39px;
   inline-size: 36px;
+  .contour {
+    fill:var(--accent-color);
+  }
   &:hover {
     cursor: pointer;
     .core {
-      fill:black;
+      fill:var(--accent-color);
       transition: fill 0.3s linear;
     }
     .main-body {
-      fill: black;
+      fill: var(--accent-color);
       transition: fill 0.3s linear 0.05s;
     }
   }
   &:active {
     .core{
-      fill: red;
+      fill: var(--heart-active);
       transition: fill 0.3s linear;
     }
     .main-body {
-      fill: red;
+      fill: var(--heart-active);
       transition: fill 0.3s linear 0.05s;
     }
   }
@@ -36,15 +39,15 @@
     animation-delay: 0.1s;
     animation-direction: alternate;
     .contour {
-      fill: red;
+      fill: var(--heart-active);
       transition: fill 0.3s linear 0.06s;
     }
     .core {
-      fill: red;
+      fill: var(--heart-active);
       transition: fill 0.3s linear;
     }
     .main-body {
-      fill: red;
+      fill: var(--heart-active);
       transition: fill 0.3s linear 0.05s;
     }
     .sparks {

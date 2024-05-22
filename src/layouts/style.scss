@@ -18,21 +18,18 @@
 .page {
   min-inline-size: 320px;
   min-block-size: 100dvb;
-  color: $accent-color;
-  // background-image: repeating-linear-gradient(
-  //     to right,
-  //     $gradient-inline 0 2px,
-  //     transparent 2px 4px
-  //   ),
-  //   repeating-linear-gradient(
-  //     to bottom,
-  //     $gradient-inline 0 2px,
-  //     transparent 2px 4px
-  //   ),
-  //   linear-gradient($gradient-block-start 0.01%, $gradient-block-end);
-
-  // TEST
-  background-color: $accent-color;
+  color: var(--accent-color);
+  background-image: repeating-linear-gradient(
+      to right,
+      var(--gradient-inline) 0 2px,
+      transparent 2px 4px
+    ),
+    repeating-linear-gradient(
+      to bottom,
+      var(--gradient-inline) 0 2px,
+      transparent 2px 4px
+    ),
+    linear-gradient(var(--gradient-block-start) 0.01%, var(--gradient-block-end));
 }
 
 .container {

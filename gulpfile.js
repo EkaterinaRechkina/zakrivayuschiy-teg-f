@@ -62,19 +62,6 @@ function html() {
         .pipe(browserSync.reload({stream: true}));
 }
 
-// function css() {
-//   const plugins = [
-//       autoprefixer(),
-//       mediaquery(),
-//       // cssnano()
-//   ];
-//   return gulp.src('src/**/*.css')
-//         .pipe(plumber())
-//         .pipe(concat('bundle1.css'))
-//         .pipe(postcss(plugins))
-// 				.pipe(gulp.dest('dist/'))
-//         .pipe(browserSync.reload({stream: true}));
-// }
 
 function scss() {
   const plugins = [
@@ -103,7 +90,6 @@ function clean() {
 function watchFiles() {
   gulp.watch(['src/**/*.pug'], pug);
   gulp.watch(['src/**/*.html'], html);
-  // gulp.watch(['src/**/*.css'], css); 
   gulp.watch(['src/**/*.scss'], scss); 
   gulp.watch(['src/**/*.{jpg,png,svg,gif,ico,webp,avif}'], images);
   gulp.watch(['src/**/*.woff*'], fonts); 
@@ -116,7 +102,6 @@ const watchapp = gulp.parallel(build, watchFiles, serve);
 exports.html = html;
 exports.pug = pug;
 exports.images = images;
-// exports.css = css;
 exports.scss = scss;
 exports.fonts = fonts;
 exports.js = js;
