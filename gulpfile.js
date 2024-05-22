@@ -10,6 +10,7 @@ const cssnano = require('cssnano');
 const htmlMinify = require('html-minifier');
 const gulpPug = require('gulp-pug');
 const sass = require('gulp-sass')(require('sass'));
+const ghPages = require('gulp-gh-pages');
 
 function serve() {
   browserSync.init({
@@ -95,6 +96,11 @@ function watchFiles() {
   gulp.watch(['src/**/*.woff*'], fonts); 
   gulp.watch(['src/**/*.js'], js); 
 }
+
+gulp.task('deploy', function() {
+  return gulp.src('./dist/**/*')
+      .pipe(ghPages());
+});
 
 const build = gulp.series(clean, gulp.parallel(pug, scss, images,fonts, js,));
 const watchapp = gulp.parallel(build, watchFiles, serve);
