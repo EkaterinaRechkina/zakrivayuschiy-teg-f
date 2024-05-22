@@ -1,16 +1,5 @@
 @charset "UTF-8";
 
-:root {
-  --main-font: "PressStart2P-Regular", system-ui;
-  --text-font: "Inter-Variable",sans-serif;
-  --gradient-inline: #d3d3d3;
-  --gradient-block-start: #e7e7e7;
-  --gradient-block-end: #1a1a1a;
-  --accent-color: #000;
-  --base-color: #fff;
-  --heart-active: #f00;
-}
-
 @font-face {
   font-display: swap;
   font-family: "Inter-Variable";
@@ -21,6 +10,17 @@
   font-display: swap;
   font-family: "PressStart2P-Regular";
   src: local("PressStart2P-Regular"), url("../fonts/PressStart2P-Regular.woff") format("woff");
+}
+
+:root {
+  --main-font: "PressStart2P-Regular", system-ui;
+  --text-font: "Inter-Variable",sans-serif;
+  --gradient-inline: #d3d3d3;
+  --gradient-block-start: #e7e7e7;
+  --gradient-block-end: #1a1a1a;
+  --accent-color: #000;
+  --base-color: #fff;
+  --heart-active: #f00;
 }
 
 *,
