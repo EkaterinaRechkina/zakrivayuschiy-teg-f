@@ -1,12 +1,28 @@
 .button {
-  background-color: transparent;
+  background-color: var(--stroke);
   border: 2px solid var(--accent-color);
-  padding: 12.5px 132.5px;
-
-}
-
-@media (width <= 375px) {
-  .button {
-    padding: 12.5px 114.5px;
+  position: relative;
+  &::before {
+    content: " ";
+    display: block;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    background-color: var(--accent-color);
+    position: absolute;
+    transform: scaleX(0);
+    transition: transform 0.5s ease-in-out;
+    transform-origin: left;
+  }
+  &:hover {
+    color: var(--stroke);
+    &::before {
+      content: " ";
+      transform: scaleX(1);
+      transition: transform 0.5s ease-in-out;
+    }
   }
 }
+
+
