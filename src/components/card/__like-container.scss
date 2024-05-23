@@ -2,7 +2,9 @@
   display: flex;
   justify-content: flex-end;
   align-items: center;
-  gap: 12px;
+  gap: 3px;
+  padding: 0px 23px;
+  margin-block-end: 20px;
   &:focus-visible {
     outline: 2px solid;
     outline-offset: 2px;

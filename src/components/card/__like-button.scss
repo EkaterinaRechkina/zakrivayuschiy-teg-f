@@ -1,8 +1,7 @@
 .card__like-button {
-  padding:  12.5px 37px;
+  padding:  6.5px 36px;
   border: 2px solid var(--accent-color);
   background-color: inherit;
-  text-transform: uppercase;
   &:focus-visible {
     box-shadow: 2px 2px 0 var(--accent-color);
     transition: box-shadow 0.3s;

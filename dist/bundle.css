@@ -202,7 +202,7 @@ ol {
   gap: 8px;
   margin: 0 auto 102px;
   border: 2px solid var(--accent-color);
-  padding: 18.5px 21px;
+  padding: 15.5px 21px;
   font-family: var(--main-font);
   background-color: var(--base-color);
   max-inline-size: 340px;
@@ -244,8 +244,8 @@ ol {
 
 .card__block {
   position: relative;
-  -webkit-margin-after: 27px;
-          margin-block-end: 27px;
+  -webkit-margin-after: 25px;
+          margin-block-end: 25px;
   -webkit-border-before: 2px solid var(--accent-color);
           border-block-start: 2px solid var(--accent-color);
   -webkit-border-after: 2px solid var(--accent-color);
@@ -316,7 +316,7 @@ ol {
 }
 
 .card__content {
-  padding: 0 20px 25px;
+  padding: 0 26px 22px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -329,6 +329,7 @@ ol {
 
 .card__text {
   font-variation-settings: "wght" var(--main-font-weight);
+  font-size: 18px;
 }
 
 .card__like-container {
@@ -341,7 +342,10 @@ ol {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  gap: 12px;
+  gap: 3px;
+  padding: 0px 23px;
+  -webkit-margin-after: 20px;
+          margin-block-end: 20px;
 }
 
 .card__like-container:focus-visible {
@@ -350,8 +354,6 @@ ol {
 }
 
 .card__icon-button {
-  -ms-flex-item-align: center;
-      align-self: center;
   border: none;
   background-color: transparent;
 }
@@ -380,10 +382,9 @@ ol {
 }
 
 .card__like-button {
-  padding: 12.5px 37px;
+  padding: 6.5px 36px;
   border: 2px solid var(--accent-color);
   background-color: inherit;
-  text-transform: uppercase;
 }
 
 .card__like-button:focus-visible {
@@ -406,6 +407,7 @@ ol {
   display: inline-block;
   height: 39px;
   inline-size: 36px;
+  padding: 2px 0;
 }
 
 .like-icon .contour {
@@ -585,7 +587,7 @@ ol {
           margin-block-start: 100px;
   -webkit-margin-after: 102px;
           margin-block-end: 102px;
-  padding: 132px 0 25px;
+  padding: 122px 0 23px;
   background-color: var(--base-color);
   text-transform: uppercase;
 }
@@ -593,8 +595,8 @@ ol {
 .header__title {
   font-size: clamp(0.875rem, 0.6769rem + 0.8451vw, 1.4375rem);
   line-height: 1;
-  -webkit-margin-after: 25px;
-          margin-block-end: 25px;
+  -webkit-margin-after: 23px;
+          margin-block-end: 23px;
 }
 
 .header__text {
@@ -618,6 +620,9 @@ ol {
           flex-direction: column;
   list-style-type: none;
   gap: 14px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .theme-menu__button {

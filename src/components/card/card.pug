@@ -8,8 +8,8 @@ mixin card(imgUrl, title, text,secondText, waterMark, className)
       .card__content
         p.card__text= text
         p.card__text= secondText
-        .card__like-container
-          button.card__icon-button(type='button')
-            include ./heart
-          button.card__like-button.button
-            span.card__button-text Like
+      .card__like-container
+        button.card__icon-button(type='button')
+          include ./heart
+        button.card__like-button.button
+          span.card__button-text Like
