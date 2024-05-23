@@ -1,8 +1,6 @@
 
 :root{
 &.theme-light {
-	--main-font: "PressStart2P-Regular";
-	--text-font: "Inter-Variable";
 	--gradient-inline: #d3d3d3;
 	--gradient-block-start: #e7e7e7;
 	--gradient-block-end: #1a1a1a;
@@ -10,6 +8,8 @@
 	--base-color: #fff;
 	--heart-active: #f00;
 	--stroke: #fff;
+	--main-font-weight: 400;
+  --accent-font-weight: 700;
 }
 }
 :root {
@@ -21,6 +21,8 @@
 	--base-color: #000;
 	--heart-active: #f00;
 	--stroke: #000;
+	--main-font-weight: 465;
+  --accent-font-weight: 785;
 }
 }
 
@@ -33,5 +35,7 @@
 		--base-color: #000;
 		--heart-active: #f00;
 		--stroke: #000;
+		--main-font-weight: 465;
+		--accent-font-weight: 785;
 	}
 }

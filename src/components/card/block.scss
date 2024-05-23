@@ -1,4 +1,6 @@
 .card__block {
   position: relative;
   margin-block-end: 27px;
+  border-block-start: 2px solid var(--accent-color);
+  border-block-end: 2px solid var(--accent-color);
 }

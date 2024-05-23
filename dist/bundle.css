@@ -2,19 +2,22 @@
 
 @font-face {
   font-display: swap;
-  font-family: "Inter-Variable";
+  font-family: "Inter";
+  font-weight: 400, 785;
   src: local("Inter-Variable"), url("fonts/Inter-Variable.woff2") format("woff2 supports variations"), url("fonts/Inter-Variable.woff2") format("woff2-variations");
 }
 
 @font-face {
   font-display: swap;
-  font-family: "PressStart2P-Regular";
+  font-family: "PressStart2P";
   src: local("PressStart2P-Regular"), url("fonts/PressStart2P-Regular.woff") format("woff");
 }
 
 :root {
-  --main-font: "PressStart2P-Regular", system-ui;
-  --text-font: "Inter-Variable",sans-serif;
+  --main-font: "PressStart2P", fantasy;
+  --text-font: "Inter",sans-serif;
+  --main-font-weight: 400;
+  --accent-font-weight: 700;
   --gradient-inline: #d3d3d3;
   --gradient-block-start: #e7e7e7;
   --gradient-block-end: #1a1a1a;
@@ -29,6 +32,14 @@
 *::before {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
+}
+
+button:hover {
+  cursor: pointer;
+}
+
+button:focus {
+  outline: none;
 }
 
 body {
@@ -94,10 +105,15 @@ ol {
 .page {
   min-inline-size: 320px;
   min-block-size: 100dvb;
+  font-variation-settings: "wght" var(--main-font-weight, 400);
   color: var(--accent-color);
   background-image: repeating-linear-gradient(to right, var(--gradient-inline) 0 2px, transparent 2px 4px), repeating-linear-gradient(to bottom, var(--gradient-inline) 0 2px, transparent 2px 4px), -webkit-gradient(linear, left top, left bottom, color-stop(0.01%, var(--gradient-block-start)), to(var(--gradient-block-end)));
   background-image: -o-repeating-linear-gradient(left, var(--gradient-inline) 0 2px, transparent 2px 4px), -o-repeating-linear-gradient(top, var(--gradient-inline) 0 2px, transparent 2px 4px), -o-linear-gradient(var(--gradient-block-start) 0.01%, var(--gradient-block-end));
   background-image: repeating-linear-gradient(to right, var(--gradient-inline) 0 2px, transparent 2px 4px), repeating-linear-gradient(to bottom, var(--gradient-inline) 0 2px, transparent 2px 4px), linear-gradient(var(--gradient-block-start) 0.01%, var(--gradient-block-end));
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 
 .container {
@@ -106,8 +122,6 @@ ol {
 }
 
 :root.theme-light {
-  --main-font: "PressStart2P-Regular";
-  --text-font: "Inter-Variable";
   --gradient-inline: #d3d3d3;
   --gradient-block-start: #e7e7e7;
   --gradient-block-end: #1a1a1a;
@@ -115,6 +129,8 @@ ol {
   --base-color: #fff;
   --heart-active: #f00;
   --stroke: #fff;
+  --main-font-weight: 400;
+  --accent-font-weight: 700;
 }
 
 :root.theme-dark {
@@ -125,6 +141,8 @@ ol {
   --base-color: #000;
   --heart-active: #f00;
   --stroke: #000;
+  --main-font-weight: 465;
+  --accent-font-weight: 785;
 }
 
 .button__save {
@@ -143,10 +161,10 @@ ol {
   padding: 18.5px 21px;
   font-family: var(--main-font);
   background-color: var(--base-color);
+  max-inline-size: 340px;
 }
 
 .button__save:hover {
-  cursor: pointer;
   -webkit-animation: paintingBlack 0.5s ease-in-out;
           animation: paintingBlack 0.5s ease-in-out;
 }
@@ -156,15 +174,22 @@ ol {
   block-size: 21px;
 }
 
-.text__save {
+.button__text {
+  font-family: var(--main-font);
   font-size: 14px;
   line-height: 0.9;
+  color: var(--accent-color);
+  mix-blend-mode: difference;
 }
 
 .card__block {
   position: relative;
   -webkit-margin-after: 27px;
           margin-block-end: 27px;
+  -webkit-border-before: 2px solid var(--accent-color);
+          border-block-start: 2px solid var(--accent-color);
+  -webkit-border-after: 2px solid var(--accent-color);
+          border-block-end: 2px solid var(--accent-color);
 }
 
 .button__text {
@@ -193,6 +218,17 @@ ol {
   background-color: transparent;
 }
 
+.card__icon-button:focus {
+  outline: 2px solid transparent;
+}
+
+.card__icon-button:focus-visible {
+  outline-color: var(--accent-color);
+  -webkit-transition: outline-color 0.3s ease;
+  -o-transition: outline-color 0.3s ease;
+  transition: outline-color 0.3s ease;
+}
+
 .main-body {
   fill: none;
 }
@@ -210,59 +246,55 @@ ol {
   border: 2px solid var(--accent-color);
   background-color: inherit;
   text-transform: uppercase;
+  position: relative;
+}
+
+.card__like-button::before {
+  content: " ";
+  display: block;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  background-color: var(--accent-color);
+  position: absolute;
+  -webkit-transform: scaleX(0);
+      -ms-transform: scaleX(0);
+          transform: scaleX(0);
+  -webkit-transition: -webkit-transform 0.5s ease-in-out;
+  transition: -webkit-transform 0.5s ease-in-out;
+  -o-transition: transform 0.5s ease-in-out;
+  transition: transform 0.5s ease-in-out;
+  transition: transform 0.5s ease-in-out, -webkit-transform 0.5s ease-in-out;
+  -webkit-transform-origin: left;
+      -ms-transform-origin: left;
+          transform-origin: left;
 }
 
 .card__like-button:hover {
-  cursor: pointer;
-  -webkit-animation: paintingBlack 0.5s ease-in-out;
-          animation: paintingBlack 0.5s ease-in-out;
+  color: var(--stroke);
 }
 
-.card__like-button:focus {
-  outline: none;
+.card__like-button:hover::before {
+  content: " ";
+  -webkit-transform: scaleX(1);
+      -ms-transform: scaleX(1);
+          transform: scaleX(1);
+  -webkit-transition: -webkit-transform 0.5s ease-in-out;
+  transition: -webkit-transform 0.5s ease-in-out;
+  -o-transition: transform 0.5s ease-in-out;
+  transition: transform 0.5s ease-in-out;
+  transition: transform 0.5s ease-in-out, -webkit-transform 0.5s ease-in-out;
 }
 
 .card__like-button:focus-visible {
   -webkit-box-shadow: 2px 2px 0 var(--accent-color);
           box-shadow: 2px 2px 0 var(--accent-color);
-}
-
-@-webkit-keyframes paintingBlack {
-  0% {
-    -webkit-box-shadow: inset 0 0 0 0 var(--accent-color);
-            box-shadow: inset 0 0 0 0 var(--accent-color);
-  }
-
-  50% {
-    -webkit-box-shadow: inset 10vw 0 0 0 var(--accent-color);
-            box-shadow: inset 10vw 0 0 0 var(--accent-color);
-    color: #fff;
-  }
-
-  100% {
-    -webkit-box-shadow: inset 100vw 0 0 0 var(--accent-color);
-            box-shadow: inset 100vw 0 0 0 var(--accent-color);
-    color: #fff;
-  }
-}
-
-@keyframes paintingBlack {
-  0% {
-    -webkit-box-shadow: inset 0 0 0 0 var(--accent-color);
-            box-shadow: inset 0 0 0 0 var(--accent-color);
-  }
-
-  50% {
-    -webkit-box-shadow: inset 10vw 0 0 0 var(--accent-color);
-            box-shadow: inset 10vw 0 0 0 var(--accent-color);
-    color: #fff;
-  }
-
-  100% {
-    -webkit-box-shadow: inset 100vw 0 0 0 var(--accent-color);
-            box-shadow: inset 100vw 0 0 0 var(--accent-color);
-    color: #fff;
-  }
+  -webkit-transition: -webkit-box-shadow 0.3s;
+  transition: -webkit-box-shadow 0.3s;
+  -o-transition: box-shadow 0.3s;
+  transition: box-shadow 0.3s;
+  transition: box-shadow 0.3s, -webkit-box-shadow 0.3s;
 }
 
 .card__content {
@@ -280,6 +312,11 @@ ol {
 .card__img {
   inline-size: 100%;
   aspect-ratio: 1/1;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
+  display: block;
 }
 
 .blur {
@@ -330,10 +367,23 @@ ol {
 
 .like-icon .contour {
   fill: var(--accent-color);
+  -webkit-transition: fill 0.1s linear;
+  -o-transition: fill 0.1s linear;
+  transition: fill 0.1s linear;
 }
 
-.like-icon:hover {
-  cursor: pointer;
+.like-icon .core {
+  fill: transparent;
+  -webkit-transition: fill 0.3s 0.03s linear;
+  -o-transition: fill 0.3s 0.03s linear;
+  transition: fill 0.3s 0.03s linear;
+}
+
+.like-icon .main-body {
+  fill: transparent;
+  -webkit-transition: fill 0.3s linear;
+  -o-transition: fill 0.3s linear;
+  transition: fill 0.3s linear;
 }
 
 .like-icon:hover .core {
@@ -362,20 +412,6 @@ ol {
   -webkit-transition: fill 0.3s linear 0.05s;
   -o-transition: fill 0.3s linear 0.05s;
   transition: fill 0.3s linear 0.05s;
-}
-
-.like-icon .core {
-  fill: transparent;
-  -webkit-transition: fill 0.1s linear;
-  -o-transition: fill 0.1s linear;
-  transition: fill 0.1s linear;
-}
-
-.like-icon .main-body {
-  fill: transparent;
-  -webkit-transition: fill 0.3s linear;
-  -o-transition: fill 0.3s linear;
-  transition: fill 0.3s linear;
 }
 
 .like-icon.is-liked {
@@ -416,6 +452,14 @@ ol {
           animation-delay: 0.3s;
   -webkit-animation-direction: alternate;
           animation-direction: alternate;
+}
+
+.is-liked.heart {
+  -webkit-transform-origin: center;
+      -ms-transform-origin: center;
+          transform-origin: center;
+  -webkit-animation: heartScale 0.3s ease-in 0.1s alternate 2;
+          animation: heartScale 0.3s ease-in 0.1s alternate 2;
 }
 
 @-webkit-keyframes sparks {
@@ -475,10 +519,6 @@ ol {
   gap: 12px;
 }
 
-.like__container:focus {
-  outline: none;
-}
-
 .like__container:focus-visible {
   outline: 2px solid;
   outline-offset: 2px;
@@ -487,8 +527,9 @@ ol {
 .card__title {
   font-size: 18px;
   line-height: 1.21;
-  font-weight: 700;
+  font-variation-settings: "wght" var(--accent-font-weight);
   padding: 3px 10px;
+  mix-blend-mode: hard-light;
 }
 
 .card__watermark {
@@ -500,6 +541,8 @@ ol {
   top: 25px;
   font-family: var(--main-font);
   z-index: 3;
+  white-space: nowrap;
+  font-size: 14px;
 }
 
 .cards-list {
@@ -561,10 +604,6 @@ ol {
   text-transform: uppercase;
 }
 
-.theme-menu__button:hover {
-  cursor: pointer;
-}
-
 .theme-menu__button:disabled {
   opacity: 0.6;
   color: var(--accent-color);
@@ -591,10 +630,6 @@ ol {
   -webkit-transition: 400ms;
   -o-transition: 400ms;
   transition: 400ms;
-}
-
-.theme-menu__button:focus {
-  outline: none;
 }
 
 .theme-menu__button:focus-visible {
@@ -647,11 +682,11 @@ ol {
   line-height: 1;
 }
 
-#popover::-webkit-backdrop {
+#dialog-id::-webkit-backdrop {
   background-color: rgba(0, 0, 0, 0.75);
 }
 
-#popover::backdrop {
+#dialog-id::backdrop {
   background-color: rgba(0, 0, 0, 0.75);
 }
 
@@ -672,7 +707,6 @@ ol {
 }
 
 .popup__button:hover {
-  cursor: pointer;
   -webkit-animation: paintingBlack 0.5s ease-in-out;
           animation: paintingBlack 0.5s ease-in-out;
 }
@@ -702,6 +736,16 @@ ol {
   line-height: 1.5;
 }
 
+.button {
+  background-color: transparent;
+  border: 2px solid var(--accent-color);
+  padding: 12.5px 132.5px;
+}
+
+.card__text {
+  font-variation-settings: "wght" var(--main-font-weight);
+}
+
 @media (prefers-color-sheme: dark){
   :root {
     --gradient-inline: #000;
@@ -711,6 +755,24 @@ ol {
     --base-color: #000;
     --heart-active: #f00;
     --stroke: #000;
+    --main-font-weight: 465;
+    --accent-font-weight: 785;
+  }
+}
+
+@media (width <= 375px){
+  .button__save {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .popup {
+    max-inline-size: 341px;
+    padding: 31.5px 42px;
+  }
+  .button {
+    padding: 12.5px 114.5px;
   }
 }
 
@@ -720,8 +782,5 @@ ol {
   }
   .header__text {
     font-size: clamp(3.0625rem, 2.7104rem + 1.5023vw, 4.0625rem);
-  }
-  .popup {
-    max-inline-size: 341px;
   }
 }

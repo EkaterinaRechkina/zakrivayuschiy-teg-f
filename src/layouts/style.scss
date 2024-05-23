@@ -18,6 +18,7 @@
 .page {
   min-inline-size: 320px;
   min-block-size: 100dvb;
+  font-variation-settings: "wght" var(--main-font-weight, 400);
   color: var(--accent-color);
   background-image: repeating-linear-gradient(
       to right,
@@ -30,6 +31,10 @@
       transparent 2px 4px
     ),
     linear-gradient(var(--gradient-block-start) 0.01%, var(--gradient-block-end));
+    background-size: cover;
+    background-attachment:fixed;
+    background-position: center;
+    background-repeat: no-repeat;
 }
 
 .container {

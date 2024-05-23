@@ -5,9 +5,17 @@
   box-sizing: border-box;
 }
 
-// * {
-//   border: 1px solid red;
-// }
+button {
+  &:hover {
+  cursor: pointer;
+}
+}
+
+button {
+  &:focus {
+  outline: none;
+}
+}
 
 body {
   margin: 0;

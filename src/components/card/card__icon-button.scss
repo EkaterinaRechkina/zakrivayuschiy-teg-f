@@ -2,6 +2,13 @@
   align-self: center;
   border: none;
   background-color: transparent;
+  &:focus {
+    outline: 2px solid transparent;
+  }
+  &:focus-visible {
+    outline-color: var(--accent-color);
+    transition: outline-color 0.3s ease;
+  }
  }
 
 .main-body {

@@ -1,4 +1,7 @@
-.text__save {
+.button__text {
+  font-family: var(--main-font);
   font-size: 14px;
   line-height: 0.9;
+  color: var(--accent-color);
+  mix-blend-mode: difference;
 }

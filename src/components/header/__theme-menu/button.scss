@@ -4,9 +4,6 @@
   padding: 0;
   position: relative;
   text-transform: uppercase;
-  &:hover {
-    cursor: pointer;
-  }
   &:disabled{
     opacity: 0.6;
     color:  var(--accent-color);
@@ -28,10 +25,6 @@
     background: var(--accent-color);
     opacity: 0.6;
     transition: 400ms;
-  }
-
-  &:focus {
-    outline: none;
   }
   &:focus-visible {
     opacity: 0.6;

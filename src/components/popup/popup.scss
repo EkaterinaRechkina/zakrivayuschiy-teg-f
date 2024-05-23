@@ -7,8 +7,9 @@
   color: var(--accent-color);
 }
 
-@media (width >= 375px){
+@media (width <= 375px){
   .popup {
     max-inline-size: 341px;
+    padding: 31.5px 42px;
   }
 }

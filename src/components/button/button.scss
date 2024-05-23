@@ -1,0 +1,12 @@
+.button {
+  background-color: transparent;
+  border: 2px solid var(--accent-color);
+  padding: 12.5px 132.5px;
+
+}
+
+@media (width <= 375px) {
+  .button {
+    padding: 12.5px 114.5px;
+  }
+}

@@ -3,9 +3,6 @@
   justify-content: flex-end;
   align-items: center;
   gap: 12px;
-  &:focus {
-    outline: none;
-  }
   &:focus-visible {
     outline: 2px solid;
     outline-offset: 2px;

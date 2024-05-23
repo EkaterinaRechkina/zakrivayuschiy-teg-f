@@ -4,9 +4,17 @@
   inline-size: 36px;
   .contour {
     fill:var(--accent-color);
+    transition: fill 0.1s linear; 
+  }
+  .core {
+    fill: transparent;
+    transition: fill 0.3s 0.03s linear;
+  }
+  .main-body {
+    fill: transparent;
+    transition: fill 0.3s linear;
   }
   &:hover {
-    cursor: pointer;
     .core {
       fill:var(--accent-color);
       transition: fill 0.3s linear;
@@ -25,14 +33,6 @@
       fill: var(--heart-active);
       transition: fill 0.3s linear 0.05s;
     }
-  }
-  .core {
-    fill: transparent;
-    transition: fill 0.1s linear;
-  }
-  .main-body {
-    fill: transparent;
-    transition: fill 0.3s linear;
   }
   &.is-liked {
     animation:heartScale 0.3s ease-in 1;
@@ -59,6 +59,12 @@
   }
 }
 
+.is-liked {
+  &.heart {
+    transform-origin: center;
+    animation: heartScale 0.3s ease-in 0.1s alternate 2;
+  }
+}
 
 @keyframes sparks {
   from {
