@@ -201,16 +201,9 @@ ol {
           align-items: center;
   gap: 8px;
   margin: 0 auto 102px;
-  border: 2px solid var(--accent-color);
   padding: 15.5px 21px;
   font-family: var(--main-font);
-  background-color: var(--base-color);
   max-inline-size: 340px;
-}
-
-.button__save:hover {
-  -webkit-animation: paintingBlack 0.5s ease-in-out;
-          animation: paintingBlack 0.5s ease-in-out;
 }
 
 .button__text {
@@ -401,6 +394,8 @@ ol {
   font-family: var(--main-font);
   font-size: 14px;
   line-height: 0.9;
+  color: var(--accent-color);
+  mix-blend-mode: difference;
 }
 
 .like-icon {
