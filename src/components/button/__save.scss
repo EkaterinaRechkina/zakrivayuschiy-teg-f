@@ -4,13 +4,15 @@
   align-items: center;
   gap: 8px;
   margin: 0 auto 102px;
-  padding: 15.5px 21px;
+  padding: 15.5px 13px;
   font-family: var(--main-font);
   max-inline-size: 340px;
 }
 
+
 @media (width <=375px) {
   .button__save {
+    padding: 15.5px 21px;
     flex-direction: column;
   }
 }

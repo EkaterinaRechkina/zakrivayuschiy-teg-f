@@ -1,6 +1,12 @@
 .card__content {
-  padding:0 26px 22px;
+  padding: 5px 24px 22px;
   display: flex;
   flex-direction: column;
   gap: 27px;
+}
+
+@media (width <=600) {
+  .card__content {
+    padding: 0 26px 22px;
+  }
 }

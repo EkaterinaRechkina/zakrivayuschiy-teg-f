@@ -7,7 +7,14 @@
   border: 2px solid var(--accent-color);
   margin-block-start: 100px;
   margin-block-end: 102px;
-  padding: 122px 0 23px;
+  padding: 139px 0 23px;
   background-color: var(--base-color);
   text-transform: uppercase;
+}
+
+
+@media (width <=600){
+  .header {
+  padding: 122px 0 23px;
+  }
 }
