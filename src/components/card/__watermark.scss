@@ -1,8 +1,9 @@
 .card__watermark {
   position: absolute;
   color: var(--accent-color);
-  -webkit-text-stroke: 1px var(--stroke);
-  text-shadow: -1px 0 var(--stroke), 0 1px var(--stroke), 1px 0 var(--stroke), 0 -1px var(--stroke);
+  // -webkit-text-stroke: 1px var(--stroke);
+  // text-shadow: -1px 0 var(--stroke), 0 1px var(--stroke), 1px 0 var(--stroke), 0 -1px var(--stroke);
+  text-shadow: 1px 1px var(--stroke), -1px -1px var(--stroke);
   right: 25px;
   top: 25px;
   font-family:  var(--main-font);
@@ -11,3 +12,5 @@
   font-size: 14px;
   mix-blend-mode: hard-light;
 }
+
+

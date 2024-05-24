@@ -2,6 +2,7 @@
   background-color: var(--stroke);
   border: 2px solid var(--accent-color);
   position: relative;
+  // z-index: 1;
   &::before {
     content: " ";
     display: block;

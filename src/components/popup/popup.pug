@@ -3,5 +3,5 @@ dialog.popup#dialog-id
     .svg__container-popup
       include ../diskette/diskette_popup
     p.popup__text Вставьте дискету, чтобы продолжить
-  button.popup__button.button(type="button")
-   span.popup__text Ок
+  button.popup__button.button(type="button" onclick="window['dialog-id'].close();")
+    span.popup__button-text Ок

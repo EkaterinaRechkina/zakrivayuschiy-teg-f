@@ -1,17 +1,18 @@
 
-:root{
-&.theme-light {
-	--gradient-inline: #d3d3d3;
-	--gradient-block-start: #e7e7e7;
-	--gradient-block-end: #1a1a1a;
-	--accent-color: #000;
-	--base-color: #fff;
-	--heart-active: #f00;
-	--stroke: #fff;
-	--main-font-weight: 400;
-  --accent-font-weight: 700;
-}
-}
+// :root{
+// &.theme-light {
+// 	--gradient-inline: #d3d3d3;
+// 	--gradient-block-start: #e7e7e7;
+// 	--gradient-block-end: #1a1a1a;
+// 	--accent-color: #000;
+// 	--base-color: #fff;
+// 	--heart-active: #f00;
+// 	--stroke: #fff;
+// 	--main-font-weight: 400;
+//   --accent-font-weight: 700;
+// 	--hover-color: #fff;
+// }
+// }
 :root {
   &.theme-dark {
 	--gradient-inline: #000;
@@ -23,10 +24,12 @@
 	--stroke: #000;
 	--main-font-weight: 465;
   --accent-font-weight: 785;
+	--hover-color: #00cc14;
 }
 }
 
-@media (prefers-color-sheme: dark) {
+
+@media (prefers-color-scheme: dark) {
 	:root {
 		--gradient-inline: #000;
 		--gradient-block-start: #007f0c;
@@ -37,5 +40,6 @@
 		--stroke: #000;
 		--main-font-weight: 465;
 		--accent-font-weight: 785;
+		--hover-color: #00cc14;
 	}
 }

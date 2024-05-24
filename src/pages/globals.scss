@@ -5,18 +5,6 @@
   box-sizing: border-box;
 }
 
-button {
-  &:hover {
-  cursor: pointer;
-}
-}
-
-button {
-  &:focus {
-  outline: none;
-}
-}
-
 body {
   margin: 0;
 }
@@ -59,4 +47,16 @@ ol {
   clip: rect(0 0 0 0);
   clip-path: inset(50%);
   white-space: nowrap;
+}
+
+button {
+  &:hover {
+  cursor: pointer;
+}
+}
+
+button {
+  &:focus {
+  outline: none;
+}
 }
