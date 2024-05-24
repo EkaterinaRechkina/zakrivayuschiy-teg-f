@@ -201,7 +201,7 @@ ol {
           align-items: center;
   gap: 8px;
   margin: 0 auto 102px;
-  padding: 15.5px 21px;
+  padding: 15.5px 13px;
   font-family: var(--main-font);
   max-inline-size: 340px;
 }
@@ -211,6 +211,10 @@ ol {
   font-size: 14px;
   line-height: 0.9;
   color: var(--accent-color);
+  mix-blend-mode: difference;
+}
+
+.svg__container-button {
   mix-blend-mode: difference;
 }
 
@@ -232,7 +236,6 @@ ol {
   line-height: 1.21;
   font-variation-settings: "wght" var(--accent-font-weight);
   padding: 3px 10px;
-  mix-blend-mode: hard-light;
 }
 
 .card__block {
@@ -256,6 +259,7 @@ ol {
   z-index: 3;
   white-space: nowrap;
   font-size: 14px;
+  mix-blend-mode: hard-light;
 }
 
 .card__img {
@@ -309,7 +313,7 @@ ol {
 }
 
 .card__content {
-  padding: 0 26px 22px;
+  padding: 5px 24px 22px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -547,8 +551,8 @@ ol {
 }
 
 .main {
-  -webkit-margin-after: 54px;
-          margin-block-end: 54px;
+  -webkit-margin-after: 42px;
+          margin-block-end: 42px;
 }
 
 .cards__list {
@@ -582,16 +586,13 @@ ol {
           margin-block-start: 100px;
   -webkit-margin-after: 102px;
           margin-block-end: 102px;
-  padding: 122px 0 23px;
+  padding: 139px 0 23px;
   background-color: var(--base-color);
   text-transform: uppercase;
 }
 
 .header__title {
-  font-size: clamp(0.875rem, 0.6769rem + 0.8451vw, 1.4375rem);
   line-height: 1;
-  -webkit-margin-after: 23px;
-          margin-block-end: 23px;
 }
 
 .header__text {
@@ -724,6 +725,8 @@ ol {
 .popup__text {
   font-size: 14px;
   line-height: 1.5;
+  color: var(--accent-color);
+  mix-blend-mode: difference;
 }
 
 .popup__button {
@@ -748,10 +751,14 @@ ol {
 
 @media (width <= 375px){
   .button__save {
+    padding: 15.5px 21px;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
+  }
+  .header__title {
+    font-size: 18px;
   }
   .popup {
     max-inline-size: 341px;
@@ -762,9 +769,23 @@ ol {
   }
 }
 
+@media (width <= 600){
+  .card__content {
+    padding: 0 26px 22px;
+  }
+  .main {
+    padding: 54px;
+  }
+  .header {
+    padding: 122px 0 23px;
+  }
+}
+
 @media (width >= 375px){
   .header__title {
     font-size: clamp(0.875rem, 0.6769rem + 0.8451vw, 1.4375rem);
+    -webkit-margin-after: 23px;
+            margin-block-end: 23px;
   }
   .header__text {
     font-size: clamp(3.0625rem, 2.7104rem + 1.5023vw, 4.0625rem);
