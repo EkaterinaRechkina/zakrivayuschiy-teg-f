@@ -1,4 +1,9 @@
 .main {
-  margin-block-end: 42px;
+  margin-block-end: 54px;
 }
 
+@media (width <= 600px){
+  .main  {
+    margin-block-end: 47px;
+  }
+}

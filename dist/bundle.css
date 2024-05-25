@@ -225,7 +225,14 @@ button:focus {
 }
 
 .svg__container-button {
+  width: 28px;
+  height: 28px;
   mix-blend-mode: difference;
+}
+
+.svg__container-button #diskette {
+  stroke: var(--hover-color);
+  fill: var(--hover-color);
 }
 
 .header {
@@ -248,7 +255,7 @@ button:focus {
           margin-block-start: 100px;
   -webkit-margin-after: 102px;
           margin-block-end: 102px;
-  padding: 139px 0 23px;
+  padding: 139px 0 19px;
   background-color: var(--base-color);
   text-transform: uppercase;
 }
@@ -273,9 +280,11 @@ button:focus {
           flex-direction: column;
   list-style-type: none;
   gap: 14px;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-margin-start: 19px;
+          margin-inline-start: 19px;
 }
 
 .theme-menu__button {
@@ -305,7 +314,7 @@ button:focus {
   content: "▶";
   display: inline-block;
   position: absolute;
-  left: -30px;
+  left: -20px;
   -webkit-animation: backandforth 0.5s alternate ease-in-out infinite;
           animation: backandforth 0.5s alternate ease-in-out infinite;
 }
@@ -389,8 +398,8 @@ button:focus {
 
 .card__block {
   position: relative;
-  -webkit-margin-after: 25px;
-          margin-block-end: 25px;
+  -webkit-margin-after: 24px;
+          margin-block-end: 24px;
   -webkit-border-before: 2px solid var(--accent-color);
           border-block-start: 2px solid var(--accent-color);
   -webkit-border-after: 2px solid var(--accent-color);
@@ -509,6 +518,7 @@ button:focus {
   -webkit-transition: outline 0.3s ease;
   -o-transition: outline 0.3s ease;
   transition: outline 0.3s ease;
+  padding: 2px 2px;
 }
 
 .card__icon-button:focus-visible {
@@ -520,7 +530,7 @@ button:focus {
 }
 
 .card__like-button {
-  padding: 7px 0;
+  padding: 12px 0;
   -webkit-transition: -webkit-box-shadow 0.3s;
   transition: -webkit-box-shadow 0.3s;
   -o-transition: box-shadow 0.3s;
@@ -671,8 +681,8 @@ button:focus {
 }
 
 .main {
-  -webkit-margin-after: 42px;
-          margin-block-end: 42px;
+  -webkit-margin-after: 54px;
+          margin-block-end: 54px;
 }
 
 .cards__list {
@@ -683,7 +693,7 @@ button:focus {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  gap: 54px;
+  gap: 52px;
 }
 
 .popup {
@@ -729,6 +739,11 @@ button:focus {
   text-transform: uppercase;
 }
 
+.svg__container-popup {
+  width: 84px;
+  height: 39px;
+}
+
 @media (prefers-color-scheme: dark){
   :root {
     --gradient-inline: #000;
@@ -770,8 +785,21 @@ button:focus {
   .header {
     padding: 122px 0 23px;
   }
+  .theme-menu__list {
+    gap: 11px;
+  }
+  .card__title {
+    padding: 5px 10px;
+  }
   .card__content {
     padding: 0 26px 22px;
+  }
+  .main {
+    -webkit-margin-after: 47px;
+            margin-block-end: 47px;
+  }
+  .cards__list {
+    gap: 54px;
   }
 }
 

@@ -2,6 +2,7 @@
   border: none;
   background-color: transparent;
   transition: outline 0.3s ease;
+  padding: 2px 2px;
   &:focus-visible {
     outline:2px solid var(--accent-color);
   }

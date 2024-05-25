@@ -1,6 +1,11 @@
 .cards__list {
   display: flex;
   flex-direction: column;
-  gap: 54px;
+  gap: 52px;
+}
 
+@media (width <= 600px){
+  .cards__list  {
+    gap: 54px;
+  }
 }
