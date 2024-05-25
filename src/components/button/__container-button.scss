@@ -1,9 +1,13 @@
 .svg__container-button {
-  width: 28px;
-  height: 28px;
+  width: 21px;
+  height: 21px;
+  fill: var(--hover-color);
   mix-blend-mode: difference;
-  #diskette {
-    stroke: var(--hover-color);
-    fill: var(--hover-color);
+}
+
+@media (width <=600px){
+  .svg__container-button {
+    width: 28px;
+    height: 28px;
   }
 }
