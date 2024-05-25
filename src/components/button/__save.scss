@@ -5,12 +5,10 @@
   gap: 8px;
   margin: 0 auto 102px;
   padding: 15px 13px;
-  font-family: var(--main-font);
   max-inline-size: 340px;
-position: relative;
-z-index: 2;
+  position: relative;
+  z-index: 2;
 }
-
 
 @media (width <=375px) {
   .button__save {

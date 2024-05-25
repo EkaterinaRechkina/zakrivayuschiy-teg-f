@@ -1,8 +1,12 @@
 .button {
+  font-family: var(--main-font);
+  font-size: 14px;
+  line-height: 0.9;
   background-color: var(--stroke);
   border: 2px solid var(--accent-color);
   position: relative;
-  // z-index: 1;
+  appearance: none;
+  transition: box-shadow 0.3s ease;
   &::before {
     content: " ";
     display: block;
@@ -21,9 +25,6 @@
     &::before {
       content: " ";
       transform: scaleX(1);
-      transition: transform 0.5s ease-in-out;
     }
   }
 }
-
-

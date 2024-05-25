@@ -1,9 +1,10 @@
 # Used
+
 1. scss
 2. pug
 3. gulp
 
-# start/
+# start
 
 1. npm i
 2. gulp

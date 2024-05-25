@@ -1,22 +1,11 @@
 .card__icon-button {
   border: none;
   background-color: transparent;
-  &:focus {
-    outline: 2px solid transparent;
-  }
+  transition: outline 0.3s ease;
   &:focus-visible {
-    outline-color: var(--accent-color);
-    transition: outline-color 0.3s ease;
+    outline:2px solid var(--accent-color);
   }
  }
-
-.main-body {
-  fill: none;
-}
-
-.core {
-  fill: none;
-}
 
 .sparks {
   fill: none;

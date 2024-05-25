@@ -4,8 +4,8 @@
   inline-size: 36px;
   padding: 2px 0;
   .contour {
-    fill:var(--accent-color);
-    transition: fill 0.1s linear; 
+    fill: var(--accent-color);
+    transition: fill 0.1s linear;
   }
   .core {
     fill: transparent;
@@ -17,7 +17,7 @@
   }
   &:hover {
     .core {
-      fill:var(--accent-color);
+      fill: var(--accent-color);
       transition: fill 0.3s linear;
     }
     .main-body {
@@ -26,7 +26,7 @@
     }
   }
   &:active {
-    .core{
+    .core {
       fill: var(--heart-active);
       transition: fill 0.3s linear;
     }
@@ -36,9 +36,6 @@
     }
   }
   &.is-liked {
-    animation:heartScale 0.3s ease-in 1;
-    animation-delay: 0.1s;
-    animation-direction: alternate;
     .contour {
       fill: var(--heart-active);
       transition: fill 0.3s linear 0.06s;
@@ -53,19 +50,15 @@
     }
     .sparks {
       fill: var(--heart-active);
-      animation: sparks 0.3s ease-in 1;
-      animation-delay: 0.3s;
-      animation-direction: alternate;
+      animation: sparks 0.3s ease-in 0.3s alternate 1;
+    }
+    .heart {
+      animation: heartScale 0.3s ease-in 0.1s alternate 1;
+      transform-origin: center;
     }
   }
 }
 
-.is-liked {
-  &.heart {
-    transform-origin: center;
-    animation: heartScale 0.3s ease-in 0.1s alternate 2;
-  }
-}
 
 @keyframes sparks {
   from {

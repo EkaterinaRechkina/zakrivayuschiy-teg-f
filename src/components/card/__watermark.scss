@@ -8,9 +8,17 @@
   top: 25px;
   font-family:  var(--main-font);
   z-index: 3;
-  white-space: nowrap;
   font-size: 14px;
+  line-height: 1;
+  opacity: 0.5;
   mix-blend-mode: hard-light;
+  max-inline-size: 280px;
 }
 
 
+@supports ((-webkit-text-stroke: 1px var(--stroke)) or (text-stroke: 1px var(--stroke))){
+  .card__watermark {
+    -webkit-text-stroke: 1px var(--stroke);
+    text-shadow: none;
+  }
+}
