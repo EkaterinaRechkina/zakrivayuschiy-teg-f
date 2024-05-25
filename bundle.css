@@ -225,14 +225,10 @@ button:focus {
 }
 
 .svg__container-button {
-  width: 28px;
-  height: 28px;
-  mix-blend-mode: difference;
-}
-
-.svg__container-button #diskette {
-  stroke: var(--hover-color);
+  width: 21px;
+  height: 21px;
   fill: var(--hover-color);
+  mix-blend-mode: difference;
 }
 
 .header {
@@ -742,6 +738,7 @@ button:focus {
 .svg__container-popup {
   width: 84px;
   height: 39px;
+  fill: var(--accent-color);
 }
 
 @media (prefers-color-scheme: dark){
@@ -782,6 +779,10 @@ button:focus {
 }
 
 @media (width <= 600px){
+  .svg__container-button {
+    width: 28px;
+    height: 28px;
+  }
   .header {
     padding: 122px 0 23px;
   }
