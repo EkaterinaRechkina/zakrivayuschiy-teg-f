@@ -3,6 +3,12 @@
   flex-direction: column;
   list-style-type: none;
   gap: 14px;
-  align-items: center;
+  align-items: flex-start;
+  margin-inline-start: 19px;
 }
 
+@media (width <= 600px){
+  .theme-menu__list {
+    gap: 11px;
+  }
+}
