@@ -225,8 +225,8 @@ button:focus {
 }
 
 .svg__container-button {
-  width: 21px;
-  height: 21px;
+  inline-size: 21px;
+  block-size: 21px;
   fill: var(--hover-color);
   mix-blend-mode: difference;
 }
@@ -406,8 +406,8 @@ button:focus {
   position: absolute;
   color: var(--accent-color);
   text-shadow: 1px 1px var(--stroke), -1px -1px var(--stroke);
-  right: 25px;
-  top: 25px;
+  inset-block-start: 25px;
+  inset-inline-end: 25px;
   font-family: var(--main-font);
   z-index: 3;
   font-size: 14px;
@@ -736,8 +736,8 @@ button:focus {
 }
 
 .svg__container-popup {
-  width: 84px;
-  height: 39px;
+  inline-size: 84px;
+  block-size: 39px;
   fill: var(--accent-color);
 }
 
@@ -756,32 +756,17 @@ button:focus {
   }
 }
 
-@media (width <= 375px){
+@media (width <= 600px){
   .button__save {
-    padding: 15.5px 21px;
+    padding: 15px 21px;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
   }
-  .header__title {
-    font-size: 18px;
-    -webkit-margin-after: 23px;
-            margin-block-end: 23px;
-  }
-  .popup {
-    max-inline-size: 341px;
-    padding: 31.5px 42px;
-  }
-  .popup__button {
-    padding: 12.5px 114.5px;
-  }
-}
-
-@media (width <= 600px){
   .svg__container-button {
-    width: 28px;
-    height: 28px;
+    inline-size: 28px;
+    block-size: 28px;
   }
   .header {
     padding: 122px 0 23px;
@@ -812,5 +797,20 @@ button:focus {
   }
   .header__text {
     font-size: clamp(3.0625rem, 2.7104rem + 1.5023vw, 4.0625rem);
+  }
+}
+
+@media (width <= 375px){
+  .header__title {
+    font-size: 18px;
+    -webkit-margin-after: 23px;
+            margin-block-end: 23px;
+  }
+  .popup {
+    max-inline-size: 341px;
+    padding: 31.5px 42px;
+  }
+  .popup__button {
+    padding: 12.5px 114.5px;
   }
 }

@@ -10,9 +10,9 @@
   z-index: 2;
 }
 
-@media (width <=375px) {
+@media (width <=600px) {
   .button__save {
-    padding: 15.5px 21px;
+    padding: 15px 21px;
     flex-direction: column;
   }
 }

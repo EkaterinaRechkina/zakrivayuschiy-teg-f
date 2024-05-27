@@ -1,13 +1,13 @@
 .svg__container-button {
-  width: 21px;
-  height: 21px;
+  inline-size: 21px;
+  block-size: 21px;
   fill: var(--hover-color);
   mix-blend-mode: difference;
 }
 
 @media (width <=600px){
   .svg__container-button {
-    width: 28px;
-    height: 28px;
+    inline-size: 28px;
+    block-size: 28px;
   }
 }
