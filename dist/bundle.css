@@ -225,10 +225,12 @@ button:focus {
 }
 
 .svg__container-button {
-  inline-size: 21px;
-  block-size: 21px;
+  width: 21px;
+  height: 21px;
   fill: var(--hover-color);
   mix-blend-mode: difference;
+  -o-object-fit: contain;
+     object-fit: contain;
 }
 
 .header {
@@ -736,8 +738,8 @@ button:focus {
 }
 
 .svg__container-popup {
-  inline-size: 84px;
-  block-size: 39px;
+  inline-size: 29%;
+  block-size: 29%;
   fill: var(--accent-color);
 }
 
