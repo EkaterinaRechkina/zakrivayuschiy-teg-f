@@ -526,7 +526,7 @@ button:focus {
 }
 
 .card__like-button {
-  padding: 12px 0;
+  padding: 11px 0;
   -webkit-transition: -webkit-box-shadow 0.3s;
   transition: -webkit-box-shadow 0.3s;
   -o-transition: box-shadow 0.3s;
