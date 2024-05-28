@@ -1,5 +1,6 @@
 .svg__container-popup {
-    inline-size: 29%;
-    block-size: 29%;
+    inline-size: 39px;
+    block-size: 39px;
+    flex-shrink: 0;
     fill: var(--accent-color);
 }

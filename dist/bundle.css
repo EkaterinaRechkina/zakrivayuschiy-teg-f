@@ -738,8 +738,10 @@ button:focus {
 }
 
 .svg__container-popup {
-  inline-size: 29%;
-  block-size: 29%;
+  inline-size: 39px;
+  block-size: 39px;
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
   fill: var(--accent-color);
 }
 
