@@ -1,16 +1,8 @@
 <svg viewBox="0 0 256 256" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
     <style>
-        :root.theme-light {
-           path {
+        path {
             fill: #000;
         }
-        }
-       
-        :root.theme-dark {
-              path {
-                fill: #00cc14;
-            }
-}
         @media (prefers-color-scheme: dark) {
             path {
                 fill: #00cc14;
