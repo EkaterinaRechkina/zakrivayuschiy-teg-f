@@ -23,8 +23,10 @@
   &:hover {
     color: var(--stroke);
     &::before {
-      content: " ";
       transform: scaleX(1);
     }
+  }
+  &:focus-visible {
+    box-shadow: 2px 2px 0 var(--accent-color);
   }
 }

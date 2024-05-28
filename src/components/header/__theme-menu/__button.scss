@@ -8,6 +8,7 @@
   line-height: 1;
   appearance: none;
   color: var(--accent-color);
+  transition: opacity 0.3s ease;
   &:hover {
     opacity: 0.6;
   }
@@ -33,14 +34,13 @@
     outline: none;
     opacity: 0.6;
     background: var(--accent-color);
-    transition: 0.3s ease;
+    transition: transform 0.3s ease;
     transform: scaleX(0);
     transform-origin: left;
   }
   &:focus-visible {
     opacity: 0.6;
     &::after {
-      color: var(--accent-color);
       transform: scaleX(1);
     }
   }

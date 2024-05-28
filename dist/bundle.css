@@ -192,10 +192,14 @@ button:focus {
 }
 
 .button:hover::before {
-  content: " ";
   -webkit-transform: scaleX(1);
       -ms-transform: scaleX(1);
           transform: scaleX(1);
+}
+
+.button:focus-visible {
+  -webkit-box-shadow: 2px 2px 0 var(--accent-color);
+          box-shadow: 2px 2px 0 var(--accent-color);
 }
 
 .button__save {
@@ -297,6 +301,9 @@ button:focus {
      -moz-appearance: none;
           appearance: none;
   color: var(--accent-color);
+  -webkit-transition: opacity 0.3s ease;
+  -o-transition: opacity 0.3s ease;
+  transition: opacity 0.3s ease;
 }
 
 .theme-menu__button:hover {
@@ -328,9 +335,11 @@ button:focus {
   outline: none;
   opacity: 0.6;
   background: var(--accent-color);
-  -webkit-transition: 0.3s ease;
-  -o-transition: 0.3s ease;
-  transition: 0.3s ease;
+  -webkit-transition: -webkit-transform 0.3s ease;
+  transition: -webkit-transform 0.3s ease;
+  -o-transition: transform 0.3s ease;
+  transition: transform 0.3s ease;
+  transition: transform 0.3s ease, -webkit-transform 0.3s ease;
   -webkit-transform: scaleX(0);
       -ms-transform: scaleX(0);
           transform: scaleX(0);
@@ -344,7 +353,6 @@ button:focus {
 }
 
 .theme-menu__button:focus-visible::after {
-  color: var(--accent-color);
   -webkit-transform: scaleX(1);
       -ms-transform: scaleX(1);
           transform: scaleX(1);
@@ -406,23 +414,24 @@ button:focus {
 
 .card__watermark {
   position: absolute;
+  z-index: 3;
+  opacity: 0.5;
   color: var(--accent-color);
+  font-family: var(--main-font);
+  font-size: 14px;
+  line-height: 1;
   text-shadow: 1px 1px var(--stroke), -1px -1px var(--stroke);
   inset-block-start: 25px;
   inset-inline-end: 25px;
-  font-family: var(--main-font);
-  z-index: 3;
-  font-size: 14px;
-  line-height: 1;
-  opacity: 0.5;
   mix-blend-mode: hard-light;
   max-inline-size: 280px;
 }
 
 @supports (-webkit-text-stroke: 1px var(--stroke)) or (text-stroke: 1px var(--stroke)) {
   .card__watermark {
-    -webkit-text-stroke: 1px var(--stroke);
     text-shadow: none;
+    text-stroke: 1px var(--stroke);
+    -webkit-text-stroke: 1px var(--stroke);
   }
 }
 
@@ -529,18 +538,8 @@ button:focus {
 
 .card__like-button {
   padding: 10px 0;
-  -webkit-transition: -webkit-box-shadow 0.3s;
-  transition: -webkit-box-shadow 0.3s;
-  -o-transition: box-shadow 0.3s;
-  transition: box-shadow 0.3s;
-  transition: box-shadow 0.3s, -webkit-box-shadow 0.3s;
   min-inline-size: 130px;
   text-align: center;
-}
-
-.card__like-button:focus-visible {
-  -webkit-box-shadow: 2px 2px 0 var(--accent-color);
-          box-shadow: 2px 2px 0 var(--accent-color);
 }
 
 .like-icon {

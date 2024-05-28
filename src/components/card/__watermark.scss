@@ -1,14 +1,14 @@
 .card__watermark {
   position: absolute;
+  z-index: 3;
+  opacity: 0.5;
   color: var(--accent-color);
+  font-family:  var(--main-font);
+  font-size: 14px;
+  line-height: 1;
   text-shadow: 1px 1px var(--stroke), -1px -1px var(--stroke);
   inset-block-start: 25px;
   inset-inline-end: 25px;
-  font-family:  var(--main-font);
-  z-index: 3;
-  font-size: 14px;
-  line-height: 1;
-  opacity: 0.5;
   mix-blend-mode: hard-light;
   max-inline-size: 280px;
 }
@@ -16,7 +16,8 @@
 
 @supports ((-webkit-text-stroke: 1px var(--stroke)) or (text-stroke: 1px var(--stroke))){
   .card__watermark {
-    -webkit-text-stroke: 1px var(--stroke);
     text-shadow: none;
+    text-stroke: 1px var(--stroke);
+    -webkit-text-stroke: 1px var(--stroke);
   }
 }
