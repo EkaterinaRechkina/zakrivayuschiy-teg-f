@@ -11,3 +11,11 @@
 .sparks {
   fill: none;
 }
+
+
+@media (width <= 600px){
+  .card__icon-button {
+    padding: 5px 4px;
+  }
+}
+

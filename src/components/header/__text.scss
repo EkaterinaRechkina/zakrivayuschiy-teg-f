@@ -8,3 +8,9 @@
     font-size: clamp(3.0625rem, 2.7104rem + 1.5023vw, 4.0625rem);
   }
 }
+
+@media (width <=600px){
+  .header__text  {
+    margin-block-end: 19px;
+  }
+}

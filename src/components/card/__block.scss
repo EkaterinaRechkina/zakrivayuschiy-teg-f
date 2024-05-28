@@ -1,6 +1,13 @@
 .card__block {
   position: relative;
-  margin-block-end: 24px;
+  margin-block-end: 22px;
   border-block-start: 2px solid var(--accent-color);
   border-block-end: 2px solid var(--accent-color);
+}
+
+
+@media (width <=600px) {
+  .card__block {
+    margin-block-end: 26px;
+  }
 }
