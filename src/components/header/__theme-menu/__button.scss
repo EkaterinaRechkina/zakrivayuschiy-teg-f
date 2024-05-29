@@ -1,14 +1,14 @@
 .theme-menu__button {
-  border: none;
-  background: inherit;
-  padding: 0;
   position: relative;
-  text-transform: uppercase;
+  border: none;
+  padding: 0;
+  color: var(--accent-color);
   font-size: 14px;
   line-height: 1;
-  appearance: none;
-  color: var(--accent-color);
+  text-transform: uppercase;
+  background: inherit;
   transition: opacity 0.3s ease;
+  appearance: none;
   &:hover {
     opacity: 0.6;
   }
@@ -17,9 +17,9 @@
     pointer-events: none;
     &::before {
       content: "▶";
-      display: inline-block;
       position: absolute;
       left: -20px;
+      display: inline-block;
       animation: backandforth 0.5s alternate ease-in-out infinite;
     }
   }
@@ -38,8 +38,10 @@
     transform: scaleX(0);
     transform-origin: left;
   }
-  &:focus-visible {
+  &:focus {
     opacity: 0.6;
+  }
+  &:focus-visible {
     &::after {
       transform: scaleX(1);
     }

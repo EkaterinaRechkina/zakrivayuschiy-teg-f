@@ -290,20 +290,20 @@ button:focus {
 }
 
 .theme-menu__button {
-  border: none;
-  background: inherit;
-  padding: 0;
   position: relative;
-  text-transform: uppercase;
+  border: none;
+  padding: 0;
+  color: var(--accent-color);
   font-size: 14px;
   line-height: 1;
-  -webkit-appearance: none;
-     -moz-appearance: none;
-          appearance: none;
-  color: var(--accent-color);
+  text-transform: uppercase;
+  background: inherit;
   -webkit-transition: opacity 0.3s ease;
   -o-transition: opacity 0.3s ease;
   transition: opacity 0.3s ease;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
 }
 
 .theme-menu__button:hover {
@@ -317,9 +317,9 @@ button:focus {
 
 .theme-menu__button:disabled::before {
   content: "▶";
-  display: inline-block;
   position: absolute;
   left: -20px;
+  display: inline-block;
   -webkit-animation: backandforth 0.5s alternate ease-in-out infinite;
           animation: backandforth 0.5s alternate ease-in-out infinite;
 }
@@ -348,7 +348,7 @@ button:focus {
           transform-origin: left;
 }
 
-.theme-menu__button:focus-visible {
+.theme-menu__button:focus {
   opacity: 0.6;
 }
 
@@ -782,11 +782,11 @@ button:focus {
     gap: 11px;
   }
   .card__title {
-    padding: 3px 10px;
+    padding: 6px 10px 3px;
   }
   .card__block {
-    -webkit-margin-after: 26px;
-            margin-block-end: 26px;
+    -webkit-margin-after: 25px;
+            margin-block-end: 25px;
   }
   .card__content {
     padding: 0 26px 18px;
@@ -795,8 +795,8 @@ button:focus {
     padding: 5px 4px;
   }
   .main {
-    -webkit-margin-after: 55px;
-            margin-block-end: 55px;
+    -webkit-margin-after: 41px;
+            margin-block-end: 41px;
   }
   .cards__list {
     gap: 50px;
