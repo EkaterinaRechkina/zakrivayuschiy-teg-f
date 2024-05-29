@@ -7,7 +7,7 @@
 # start
 
 1. npm i
-2. gulp
+2. npm run dev
 
 ## git@github.com:EkaterinaRechkina/zakrivayuschiy-teg-f.git
 
